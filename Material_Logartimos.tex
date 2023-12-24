@@ -1,0 +1,59 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\sisetup{per-mode=symbol}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+\DeclareSIUnit{\dB}{dB}
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Material Logaritmos \\ \large{Física IV (Área II)} \vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+Los logaritmos se definen en la forma siguiente:
+\begin{align*}
+\text{si} \hspace{0.2cm} y = A^{x} \hspace{0.3cm} \text{entonces} \hspace{0.3cm} x = \log_{A} \, y
+\end{align*}
+Esto es: el logaritmo de un número $y$ a la base $A$ es aquel número que, como exponente de $A$, devuelve el número $y$. Para \textbf{logaritmos comunes}, la base es \num{10}, de modo que
+\begin{align*}
+\text{si} \hspace{0.2cm} y = 10^{x} \hspace{0.3cm} \text{entonces} \hspace{0.3cm} x = \log \, y
+\end{align*}
+El subíndice \num{10} en $\log_{10}$ por lo general se omite cuando se trata con logaritmos comunes.
+\par
+Otra base importante es la base exponencial $e = 2.718 \dots$ un número natural. Tales logaritmos se llaman \textbf{logaritmos naturales (o neperianos)} y se escriben $\ln \, y$. Por tanto,
+\begin{align*}
+\text{si} \hspace{0.2cm} y = e^{x} \hspace{0.3cm} \text{entonces} \hspace{0.3cm} x = \ln \, y
+\end{align*}
+Para cualquier número $y$, los dos tipos de logaritmo se relacionan mediante
+\begin{align*}
+\ln \, y = 2.3026 \, \log \, y
+\end{align*}
+Algunas reglas simples para logaritmos son las siguientes:
+\begin{enumerate}
+\item $\log (a \, b) = \log \, a + \log \, b$ 
+\item $\log \left( \dfrac{a}{b} \right) = \log \, a - \log \, b$
+\item $\log \, a^{n} = n \, \log \, a$
+\end{enumerate}
+Estas tres reglas se aplican a cualquier tipo de logaritmo.
+\end{document}

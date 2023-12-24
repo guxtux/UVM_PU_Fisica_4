@@ -1,0 +1,64 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\sisetup{per-mode=symbol}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+\DeclareSIUnit{\dB}{dB}
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Actividad 2 - Ondas sonoras\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+Esta actividad otorgará hasta \textbf{10 puntos} de Evaluación Continua.
+\vspace*{0.5cm}
+
+\textbf{Instrucciones: }
+\begin{itemize}
+\item Anota tu nombre en cada hoja que ocupes para resolver los ejercicios.
+\item Identifica el ejercicio que resuelves.
+\item Resuelve detalladamente cada ejercicio, en caso de que no se tenga el desarrollo, no se tomará en cuenta como ejercicio completo, revisa con cuidado el manejo de las unidades.
+\item En caso de plagios, se cancelarán todos los trabajos involucrados.
+\end{itemize}
+
+
+\section*{Ejercicios a resolver.}
+
+% Tippens Sec. 25.5 Ondas sonoras audibles.
+\begin{enumerate}
+\item ¿Cuál es el nivel de intensidad en decibeles de un sonido que tiene una intensidad de \SI{4d-5}{\watt\per\square\meter}?
+\item La intensidad de un sonido es \SI{6d-8}{\watt\per\square\meter} ¿Cuál es el nivel de intensidad?
+\item A cierta distancia de un silbato se mide un sonido de \SI{60}{\dB}. ¿Cuál es la intensidad de ese sonido en \unit{\watt\per\square\meter}?
+\item ¿Cuál es la intensidad de un sonido de \SI{250}{\dB}?
+\item Calcula las intensidades correspondientes a sonidos de \num{10}, \num{20} y \SI{30}{\dB}.
+\item Calcula los niveles de intensidad que corresponden a sonidos de \SI{1d-6}{\watt\per\square\meter}, \SI{25d-6}{\watt\per\square\meter} y \SI{300d-6}{\watt\per\square\meter}.
+\end{enumerate}
+Para los siguientes problemas, considera que la rapidez del sonido es \SI{343}{\meter\per\second}.
+\begin{enumerate}[resume*]
+\item Una fuente estacionaria de sonido emite una señal cuya frecuencia es de \SI{290}{\hertz}. ¿Cuáles son las frecuencias que oye un observador (a) que se aproxima a la fuente a \SI{20}{\meter\per\second} y (b) que se aleja de la fuente a \SI{20}{\meter\per\second}?
+\item Un automóvil hace sonar una bocina a \SI{560}{\hertz} mientras se desplaza con una rapidez de \SI{15}{\meter\per\second}, primero aproximándose a un oyente estacionario y después alejándose de él con la misma rapidez. ¿Cuáles son las frecuencias que escucha el oyente?
+\item En un automóvil estacionado, una persona hace sonar una bocina a \SI{400}{\hertz}. ¿Qué frecuencias escucha el conductor de un vehículo que pasa junto al primero con una rapidez de \SI{60}{\kilo\meter\per\hour}?
+\item Un tren que avanza a \SI{20}{\meter\per\second} hace sonar un silbato a \SI{300}{\hertz} al pasar junto a un observador estacionario. ¿Cuáles son las frecuencias que oye el observador al pasar el tren?
+\end{enumerate}
+\end{document}

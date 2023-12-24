@@ -1,0 +1,277 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Actividad 1 - Propiedades de las ondas \\ \Large{Solución} \vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Ejercicios a resolver.}
+
+\begin{enumerate}
+\item Calcular la magnitud de la velocidad con la que se propaga una onda cuya frecuencia es de \SI{150}{\hertz} y su longitud de onda es de \SI{7}{\meter}.
+
+\textbf{Solución:}
+
+\begin{minipage}[t]{0.3\linewidth}
+\noindent
+\textocolor{red}{Datos:}
+\begin{align*}
+f &= \SI{150}{\hertz} \\
+\lambda &= \SI{7}{\meter} \\
+v &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\noindent
+\textocolor{red}{Expresión}:
+\begin{align*}
+v = \lambda \, f
+\end{align*}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+\noindent
+\textocolor{red}{Sustitución}:
+\begin{align*}
+v = (\SI{7}{\meter})(\SI{150}{\hertz}) = \SI{1050}{\meter\per\second}
+\end{align*}
+\end{minipage}
+\item Una lancha sube y baja por el paso de las olas cada \SI{4}{\second}, entre cresta y cresta hay una distancia de \SI{15}{\meter}. ¿Cuál es la magnitud de la velocidad con que se mueven las olas?
+
+\textbf{Solución:}
+
+\begin{minipage}[t]{0.3\linewidth}
+\noindent
+\textocolor{red}{Datos:}
+\begin{align*}
+T &= \SI{4}{\second} \\
+\lambda &= \SI{15}{\meter} \\
+v &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\noindent
+\textocolor{red}{Expresión(es)}:
+\begin{align*}
+f &= \dfrac{1}{T} \\
+v &= \lambda \, f
+\end{align*}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+\noindent
+\textocolor{red}{Sustitución}:
+\begin{align*}
+f &= \dfrac{1}{\SI{4}{\second}} = \SI{0.25}{\hertz} \\
+v &= (\SI{15}{\meter})(\SI{0.25}{\hertz}) = \SI{3.75}{\meter\per\second}
+\end{align*}
+\end{minipage}
+\item La cresta de una onda producida en la superficie libre de un líquido avanza \SI{0.5}{\meter\per\second}. Si tiene una longitud de onda de \SI{4d-1}{\meter}, calcula su frecuencia.
+
+\textbf{Solución:}
+
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Datos:}
+\begin{align*}
+v &= \SI{0.5}{\meter\per\second} \\[0.5em]
+\lambda &= \SI{4d-1}{\meter} \\[0.5em]
+f &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Expresión(es)}:
+\begin{align*}
+v &= \lambda \, f \\[0.5em]
+f &= \dfrac{v}{\lambda}
+\end{align*}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+\noindent
+\textocolor{red}{Sustitución}:
+\begin{align*}
+f &= \dfrac{\SI{0.5}{\meter\per\second}}{\SI{4d-1}{\meter}} = \SI{1.25}{\hertz}
+\end{align*}
+\end{minipage}
+\item Por una cuerda tensa se propagan ondas con una frecuencia de \SI{30}{\hertz} y una rapidez de propagación de \SI{10}{\meter\per\second}. ¿Cuál es su longitud de onda?
+
+\textbf{Solución:}
+
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Datos:}
+\begin{align*}
+f &= \SI{30}{\hertz} \\[0.5em]
+v &= \SI{10}{\meter\per\second} \\[0.5em]
+\lambda &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Expresión(es)}:
+\begin{align*}
+v &= \lambda \, f \\[0.5em]
+\lambda &= \dfrac{v}{f}
+\end{align*}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+\noindent
+\textocolor{red}{Sustitución}:
+\begin{align*}
+\lambda = \dfrac{\SI{10}{\meter\per\second}}{\SI{30}{\hertz}} = \SI{0.33}{\meter}
+\end{align*}
+\end{minipage}
+\item Calcula la frecuencia y el periodo de las ondas producidas en una cuerda de guitarra, si tienen una rapidez de propagación de \SI{12}{\meter\per\second} y su longitud de onda es de \SI{0.06}{\meter}.
+
+\textbf{Solución:}
+
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Datos:}
+\begin{align*}
+v &= \SI{12}{\meter\per\second} \\[0.5em]
+\lambda &= \SI{0.06}{\meter} \\[0.5em]
+T &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Expresión(es)}:
+\begin{align*}
+v &= \lambda \, f \hspace{0.3cm} \Rightarrow \hspace{0.3cm} f = \dfrac{v}{\lambda} \\[0.5em]
+T &= \dfrac{1}{f}    
+\end{align*}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+\noindent
+\textocolor{red}{Sustitución}:
+\begin{align*}
+f &= \dfrac{\SI{12}{\meter\per\second}}{\SI{0.06}{\meter}} = \SI{200}{\hertz} \\[0.5em]
+T &= \dfrac{1}{\SI{200}{\hertz}} = \SI{0.005}{\second}
+\end{align*}
+\end{minipage}
+\item Determina la frecuencia de las ondas que se transmiten por una cuerda tensa, cuya rapidez de propagación es de \SI{200}{\meter\per\second} y su longitud de onda es de \SI{0.7}{\meter}.
+
+\textbf{Solución:}
+
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Datos:}
+\begin{align*}
+v &= \SI{200}{\meter\per\second} \\[0.5em]
+\lambda &= \SI{0.7}{\meter} \\[0.5em]
+f &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Expresión(es)}:
+\begin{align*}
+v &= \lambda \, f \hspace{0.3cm} \Rightarrow \hspace{0.3cm} f = \dfrac{v}{\lambda}
+\end{align*}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+\noindent
+\textocolor{red}{Sustitución}:
+\begin{align*}
+f &= \dfrac{\SI{200}{\meter\per\second}}{\SI{0.7}{\meter}} = \SI{285.71}{\hertz}
+\end{align*}
+\end{minipage}
+
+\item ¿Cuál es la rapidez con que se propaga una onda longitudinal en un resorte, cuando su frecuencia es de \SI{180}{\hertz} y su longitud de onda es de \SI{0.8}{\meter}?
+
+\textbf{Solución:}
+
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Datos:}
+\begin{align*}
+f&= \SI{180}{\hertz} \\[0.5em]
+\lambda &= \SI{0.06}{\meter} \\[0.5em]
+v &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Expresión}:
+\begin{align*}
+v &= \lambda \, f    
+\end{align*}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+\noindent
+\textocolor{red}{Sustitución}:
+\begin{align*}
+v &= (\SI{0.03}{\meter})(\SI{90}{\hertz}) = \SI{2.7}{\meter\per\second}
+\end{align*}
+\end{minipage}
+
+\item Se produce un tren de ondas en una cuba de ondas, entre cresta y cresta hay una distancia de \SI{0.03}{\meter}, con una frecuencia de \SI{90}{\hertz}. ¿Cuál es la magnitud de la velocidad de propagación de las ondas?
+
+\textbf{Solución:}
+
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Datos:}
+\begin{align*}
+\lambda &= \SI{0.03}{\meter} \\[0.5em]
+f &= \SI{90}{\hertz} \\[0.5em]
+v &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.35\linewidth}
+\noindent
+\textocolor{red}{Expresión}:
+\begin{align*}
+v &= \lambda \, f   
+\end{align*}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+\noindent
+\textocolor{red}{Sustitución}:
+\begin{align*}
+v &= (\SI{0.03}{\meter})(\SI{90}{\hertz}) = \SI{2.7}{\meter\per\second}
+\end{align*}
+\end{minipage}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,181 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\sisetup{per-mode=symbol}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+\DeclareSIUnit{\dB}{dB}
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Actividad 2 - Ondas sonoras \\ Solución - Física IV (Área II) \vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Ejercicios a resolver.}
+
+% Tippens Sec. 25.5 Ondas sonoras audibles.
+\begin{enumerate}
+\item ¿Cuál es el nivel de intensidad en decibeles de un sonido que tiene una intensidad de \SI{4d-5}{\watt\per\square\meter}?
+
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Datos:}
+\begin{align*}
+I &= \SI{4d-5}{\watt\per\square\meter} \\[0.5em]
+I_{0} &= \SI{1d-12}{\watt\per\square\meter}
+\end{align*}
+\end{minipage}
+\hspace{0.4cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Expresión:}
+\begin{align*}
+B = 10 \, \log \left( \dfrac{I}{I_{0}} \right)
+\end{align*}
+\end{minipage}
+
+\textocolor{red}{Sustitución:}
+\begin{align*}
+B &= 10 \, \log \left( \dfrac{\SI{4d-5}{\watt\per\square\meter}}{\SI{1d-12}{\watt\per\square\meter}} \right) = 10 \, \log \left( \num{4d7} \right) = \\[0.5em]
+B &= 10 \, (7.60) = \SI{76}{\dB}
+\end{align*}
+\item La intensidad de un sonido es \SI{6d-8}{\watt\per\square\meter} ¿Cuál es el nivel de intensidad?
+
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Datos:}
+\begin{align*}
+I &= \SI{6d-8}{\watt\per\square\meter} \\[0.5em]
+I_{0} &= \SI{1d-12}{\watt\per\square\meter}
+\end{align*}
+\end{minipage}
+\hspace{0.4cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Expresión:}
+\begin{align*}
+B = 10 \, \log \left( \dfrac{I}{I_{0}} \right)
+\end{align*}
+\end{minipage}
+
+\textocolor{red}{Sustitución:}
+\begin{align*}
+B &= 10 \, \log \left( \dfrac{\SI{6d-8}{\watt\per\square\meter}}{\SI{1d-12}{\watt\per\square\meter}} \right) = 10 \, \log \left( \num{6d4} \right) = \\[0.5em]
+B &= 10 \, (4.778) = \SI{47.78}{\dB}
+\end{align*}
+\item A cierta distancia de un silbato se mide un sonido de \SI{60}{\dB}. ¿Cuál es la intensidad de ese sonido en \unit{\watt\per\square\meter}?
+
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Datos:}
+\begin{align*}
+B &= \SI{60}{\dB} \\[0.5em]
+I_{0} &= \SI{1d-12}{\watt\per\square\meter}
+\end{align*}
+\end{minipage}
+\hspace{0.4cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Expresión:}
+\begin{align*}
+B &= 10 \, \log \left( \dfrac{I}{I_{0}} \right) \\[0.5em]
+\log \left( \dfrac{I}{I_{0}} \right) &= \dfrac{B}{10} \\[0.5em]
+\dfrac{I}{I_{0}} &= 10^{(B/10)} \\[0.5em]
+I &= I_{0} \, 10^{(B/10)}
+\end{align*}
+\end{minipage}
+
+\textocolor{red}{Sustitución:}
+\begin{align*}
+I &= (\SI{1d-12}{\watt\per\square\meter}) \left( 10^{6} \right) = \SI{1d-6}{\watt\per\square\meter}
+\end{align*}
+\item ¿Cuál es la intensidad de un sonido de \SI{250}{\dB}?
+
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Datos:}
+\begin{align*}
+B &= \SI{250}{\dB} \\[0.5em]
+I_{0} &= \SI{1d-12}{\watt\per\square\meter}
+\end{align*}
+\end{minipage}
+\hspace{0.4cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Expresión:}
+\begin{align*}
+I &= I_{0} \, 10^{(B/10)}
+\end{align*}
+\end{minipage}
+
+\textocolor{red}{Sustitución:}
+\begin{align*}
+I &= (\SI{1d-12}{\watt\per\square\meter}) \left( 10^{25} \right) = \SI{1d13}{\watt\per\square\meter}
+\end{align*}
+\item Calcula las intensidades correspondientes a sonidos de \num{10}, \num{20} y \SI{30}{\dB}.
+
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Datos:}
+\begin{align*}
+B_{1} &= \SI{10}{\dB} \\[0.5em]
+B_{2} &= \SI{20}{\dB} \\[0.5em]
+B_{3} &= \SI{30}{\dB} \\[0.5em]
+I_{0} &= \SI{1d-12}{\watt\per\square\meter}
+\end{align*}
+\end{minipage}
+\hspace{0.4cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Expresión:}
+\begin{align*}
+I_{i} &= I_{0} \, 10^{(B_{i}/10)} \hspace{1cm} i = 1, 2, 3
+\end{align*}
+\end{minipage}
+
+\textocolor{red}{Sustitución:}
+\begin{align*}
+I_{1} &= (\SI{1d-12}{\watt\per\square\meter}) \left( 10 \right) = \SI{1d-11}{\watt\per\square\meter} \\[0.5em]
+I_{2} &= (\SI{1d-12}{\watt\per\square\meter}) \left( 100 \right) = \SI{1d-10}{\watt\per\square\meter} \\[0.5em]
+I_{3} &= (\SI{1d-12}{\watt\per\square\meter}) \left( 1000 \right) = \SI{1d-9}{\watt\per\square\meter}
+\end{align*}
+\item Calcula los niveles de intensidad que corresponden a sonidos de \SI{1d-6}{\watt\per\square\meter}, \SI{25d-6}{\watt\per\square\meter} y \SI{300d-6}{\watt\per\square\meter}.
+
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Datos:}
+\begin{align*}
+I_{1} &= \SI{1d-6}{\watt\per\square\meter} \\[0.5em]
+I_{2} &= \SI{25d-6}{\watt\per\square\meter} \\[0.5em]
+I_{3} &= \SI{300d-6}{\watt\per\square\meter} \\[0.5em]
+I_{0} &= \SI{1d-12}{\watt\per\square\meter}
+\end{align*}
+\end{minipage}
+\hspace{0.4cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Expresión:}
+\begin{align*}
+B_{i} = 10 \, \log \left( \dfrac{I_{i}}{I_{0}} \right) \hspace{0.5cm} i = 1, 2, 3
+\end{align*}
+\end{minipage}
+
+\textocolor{red}{Sustitución:}
+\begin{align*}
+B_{1} &= 10 \, \log \left( \dfrac{\SI{1d-6}{\watt\per\square\meter}}{\SI{1d-12}{\watt\per\square\meter}} \right) = 10 \, \log (\num{d6}) = 10 \, (6) = \SI{60}{\dB} \\[0.5em]
+B_{2} &= 10 \, \log \left( \dfrac{\SI{25d-6}{\watt\per\square\meter}}{\SI{1d-12}{\watt\per\square\meter}} \right) = 10 \, \log (\num{2.5d7}) = 10 \, (7.397) = \\[0.5em]
+B_{2} &= \SI{73.97}{\dB} \\[0.5em]
+B_{3} &= 10 \, \log \left( \dfrac{\SI{300d-6}{\watt\per\square\meter}}{\SI{1d-12}{\watt\per\square\meter}} \right) = 10 \, \log (\num{3d8}) = \\[0.5em]
+B_{3} &= 10 \, (8.477) = \SI{84.77}{\dB}
+\end{align*}    
+\end{enumerate}
+
+\end{document}

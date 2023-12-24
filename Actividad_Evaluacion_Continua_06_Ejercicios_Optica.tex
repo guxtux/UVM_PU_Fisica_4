@@ -1,0 +1,74 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Actividad en clase \\ \large{Física IV (Área II)} \vspace{-5ex}}
+\date{}
+
+\newcommand{\arrowIn}{\tikz \draw[-stealth, line width=0.7mm] (-1pt,0) -- (1pt,0);}
+
+\begin{document}
+\maketitle
+
+\textbf{Nombre:} \rule{6cm}{0.1mm} \hspace{0.5cm} \textbf{Fecha}: \rule{3cm}{0.1mm}
+
+\vspace*{0.5cm}
+Esta actividad se resolverá en la clase del lunes 4 de diciembre, los ejercicios servirán de entrenamiento para el examen. Se te pide que resuelvas lo más detallado posible cada ejercicio, tendrás que apoyarte con tus notas para las expresiones que se requieran y el uso de tu calculadora científica.
+
+\begin{enumerate}
+\item Un rayo luminoso que se propaga en el aire se refracta al pasar de este medio a glicerina $(n = 1.5)$. El ángulo de incidencia es de \ang{30}. ¿Cuánto vale el ángulo del haz refractado?
+\item Un rayo luminoso, al pasar del un medio $A$ a otro medio $B$, se refracta en la forma que se muestra en la siguiente figura:
+
+\vspace*{1cm}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \draw [thick] (-1, 0) -- (3.5, 0);
+    \draw (-1, 2) -- (1, 0) node[
+        sloped,
+        pos=0.5,
+        allow upside down]{\arrowIn};
+        \draw (1, 0) -- (3.5, -1) node[
+        sloped,
+        pos=0.5,
+        allow upside down]{\arrowIn};
+        \node at (-1.2, 0.4) {\small{Medio A}};
+        \node at (-1.2, -0.4) {\small{Medio B}};
+\end{tikzpicture}
+\end{figure}
+\begin{enumerate}[label=\roman*)]
+\item Al refractarse dicho rayo, ¿se aproxima o se aleja de la normal?
+\item Entonces, el ángulo de incidencia $\theta_{1}$, ¿es mayor o menor que el ángulo de refracción $\theta_{2}$.
+\item ¿Cuál de los dos medios tiene mayor índice de refracción?
+\end{enumerate}
+\item Una lente menisco divergente tiene una distancia focal de \SI{-16}{\centi\meter}. Si la lente se sostiene a \SI{10}{\centi\meter} del objeto. ¿Dónde se ubica la imagen? ¿Cuál es la amplificación lateral de la lente $(m)$?
+\item Un objeto de \SI{8}{\centi\meter} de altura se encuentra a \SI{30}{\centi\meter} de una lente convergente delgada cuya longitud focal es \SI{12}{\centi\meter}. ¿Cuáles son la naturaleza (tipo de imagen y sentido), el tamaño y la ubicación de la imagen formada?
+\end{enumerate}
+
+Deberás de enviar una foto de tus soluciones y enviarla a la asignación por Teams, \textbf{te otorgará hasta 4 puntos de Evaluación Continua}, considera que el mismo lunes se cerrará la asignación y no se recibirá de manera extemporánea.
+
+\end{document}

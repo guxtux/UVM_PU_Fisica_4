@@ -1,0 +1,15 @@
+\documentclass[pstricks, margin=5pt]{standalone}
+\usepackage{pst-optexp}
+\usepackage{pstricks,auto-pst-pdf}
+\begin{document}
+\begin{pspicture}(10,5)
+  \pnodes(0,2.5){A}(10,2.5){B}
+  \psset[optexp]{lensheight=4}
+  \addtopsstyle{OptComp}{fillstyle=solid, fillcolor=blue!10}
+%   \lens[abspos=1, lensradius=4 4](A)(B)
+%   \lens[abspos=3, lensradius=-4 -4](A)(B)
+%   \lens[abspos=5, lensradius=4 -4](A)(B)
+  \lens[abspos=1, lensradius=8 -1](A)(B)
+%   \lens[abspos=9, lensradius=8 5, lenswidth=1](A)(B)
+\end{pspicture}
+\end{document}

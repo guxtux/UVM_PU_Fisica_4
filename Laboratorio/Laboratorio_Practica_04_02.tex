@@ -1,0 +1,171 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Reporte de la Práctica 4 - Lentes delgadas \\ y formación de imágenes \\  Física IV (Área II) \vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Rúbrica de Evaluación.}
+
+Con la finalidad de mantener el formato institucional para presentar el reporte final de cada Práctica de Laboratorio, se evaluará conforme a la rúbrica que se publicará en el sitio de Teams del Grupo.
+\par
+Es conveniente señalar que para cada entrega (ya sea parcial o final) del reporte, la rúbrica será el instrumento con el que se calificará, por lo que habrá que seguir el formato en Word que también estará disponible para que se utilice en cada una de las siguientes Prácticas del curso.
+\par
+Las entregas serán mediante la plataforma Teams como se ha venido manejado.
+
+\section{Marco teórico.}
+
+Responde las siguientes preguntas:
+
+\begin{enumerate}
+\itemsep0.5em 
+\item ¿Qué es un espejo plano?
+\item Explica si en un espejo plano se tiene una imagen real o virtual.
+\item ¿Qué expresión nos indica el número de imágenes que se forman con dos espejos planos?
+\item ¿Cómo funciona un microscopio?
+\item ¿Cómo funciona un telescopio?
+\end{enumerate}
+
+\section{Objetivos.}
+
+\subsection{Generales.}
+
+\begin{enumerate}
+    \item Calcular la distancia focal de una lente delgada.
+    \item Obtener múltiples imágenes con espejos planos.
+\end{enumerate}
+
+\subsection{Específicos.}
+
+\begin{enumerate}
+\item Determinar la distancia focal de una lente positiva y de una lente negativa.
+\item Comprobar la relación que indica el número de imágenes obtenidas con espejos planos.
+\end{enumerate}
+
+\section{Hipótesis.}
+
+\begin{enumerate}
+\item La distancia en la que se forma la imagen con una lente positiva corresponde con la expresión de la lente delgada convergente.
+\item El número de imágenes formadas con dos espejos planos, corresponde a las esperadas con la ecuación.
+\end{enumerate}
+
+\section{Material.}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\itemsep0.15em 
+\item Dos espejos planos.
+\item Lente convergente.
+\item Lente divergente.
+\item Láser.
+\item Lámpara.
+\item Moneda de $10$ pesos.
+\item Cuaderno cuadriculado.
+\item Flexómetro.
+\end{enumerate}
+\end{multicols}
+
+\section{Procedimiento y Registro de datos.}
+
+\subsection{Lentes delgadas.}
+
+\begin{enumerate}[label=\alph*)]
+    \item Coloca la lente delgada sobre la hoja cuadriculada procurando que una de las líneas de la hoja sirva como eje principal y otra línea perpendicular al plano central de la lente.
+    \item Con el láser apunta hacia la lente de manera paralela al eje principal, notarás que conforme mueves la lente, se identifica el foco de la lente.
+    \item Marca con tu lápiz el punto en donde consideras que está el foco de la lente.
+    \item Mide con el flexómetro la distancia del centro óptico de la lente al foco que identificaste, ésta distancia será la distancia focal de la lente.
+    \item Repite el procedimiento para la segunda lente.
+\end{enumerate}
+
+\subsection{Formación de imágenes.}
+
+Para la parte de formación de imágenes ocuparás una hoja blanca, a modo de pantalla.
+
+\begin{enumerate}[label=\alph*)]
+    \item Mide el tamaño del objeto, este valor será $h_{o}$.
+    \item Coloca un objeto delante de la lente a una distancia $d_{o}$ en cm.
+    \item Ilumina con la lámpara al objeto.
+    \item Por detrás de la lente, recorrela hoja blanca de tal manera que se tenga una imagen nítida del objeto.
+    \item Mide la distancia del centro óptico de la lente a la posición de la pantalla, ésta distancia será $h_{i}$.
+    \item Mide el tamaño de la imagen, que será el valor de $h_{i}$
+\end{enumerate}
+
+\subsection{Espejos planos.}
+
+Coloca los espejos planos sobre la hoja cuadriculada en los diferentes ángulos para observar las imágenes formadas y registra los datos obtenidos en la siguiente tabla.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| c | c |} \hline
+    Ángulo & Imágenes \\ \hline
+    \ang{40} & \\ \hline
+    \ang{50} & \\ \hline
+    \ang{60} & \\ \hline
+    \ang{70} & \\ \hline
+    \ang{80} & \\ \hline
+    \ang{90} & \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{Análisis de datos.}
+
+\subsection{Formación de imágenes.}
+
+\begin{enumerate}
+\item Con la ecuación de la lente delgada convergente, calcula la distancia $h_{i}$.
+\item Obtén con la ecuación para la amplificación lateral de la imagen.
+\item Compara los resultados de las expresiones y los que registraste.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| c | c | c | c |} \hline
+    Método & Distancia imagen $d{i}$ \unit{\centi\meter} & Tamaño $h{i}$ \unit{\centi\meter} & Sentido \\ \hline
+    Medido & & & \\ \hline
+    Expresión & & & \\ \hline
+    \end{tabular}
+\end{table}
+\end{enumerate}
+
+\subsection{Espejos planos.}
+
+Con la expresión para obtener el número de imágenes con dos espejos planos, compara el valor de la misma, con el valor que registraste en Laboratorio al cambiar el ángulo entre los espejos.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| c | c | c |} \hline
+    Ángulo & Imágenes & Imágenes Expresión \\ \hline
+    \ang{40} & & \\ \hline
+    \ang{50} & & \\ \hline
+    \ang{60} & & \\ \hline
+    \ang{70} & & \\ \hline
+    \ang{80} & & \\ \hline
+    \ang{90} & & \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{Discusión.}
+
+Tanto para la formación de imágenes como con los espejos, responde las siguientes preguntas:
+\begin{enumerate}
+    \item ¿Coinciden los valores entre las expresiones y lo que se midió en Laboratorio?
+    \item En caso de que haya diferencias, ¿a qué se deben?
+    \item ¿Cómo podrías obtener la distancia de la imagen y el tamaño de la misma con una lente divergente? Explica tu procedimiento.
+\end{enumerate}
+\end{document}

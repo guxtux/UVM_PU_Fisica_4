@@ -284,7 +284,7 @@ La energía total es constante e igual a la suma de la \textocolor{carmine}{ener
 
 \begin{frame}
 \frametitle{El principio de Bernoulli}
-La suma de la \textcolor{red}{presión} (P), más la \textocolor{cornellred}{energía cinética} por unidad de volumen $(1/2 \, \rho \, v^{2})$, y la \textocolor{darkblue}{energía potencial} por unidad de volumen $(\rho \, g \, h)$:
+La suma de la \textocolor{red}{presión} (P), \pause más la \textocolor{cornellred}{energía cinética} por unidad de volumen $\left(\dfrac{1}{2} \, \rho \, v^{2} \right)$, \pause y la \textocolor{darkblue}{energía potencial} por unidad de volumen $(\rho \, g \, h)$:
 \\
 \bigskip
 \pause
@@ -312,12 +312,14 @@ E &= \dfrac{1}{2} m \, v^{2} + m \, g \, h
 Si expresamos la energía en función de la densidad, se obtiene la siguiente expresión:
 \pause
 \begin{align*}
-P_{1} + \rho \, g \, h_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \rho \, g \, h_{2} + \dfrac{1}{2} \rho \, v_{2}^{2}
+\setlength{\fboxsep}{3\fboxsep}\boxed{
+P_{1} + \rho \, g \, h_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \rho \, g \, h_{2} + \dfrac{1}{2} \rho \, v_{2}^{2}}
 \end{align*}
 Esta es la llamada \textocolor{darkscarlet}{ecuación de Bernoulli}.
 \end{frame}
 \begin{frame}
 \frametitle{Ejercicio - Ec. de Bernoulli}
+\vspace*{-1cm}
 Una tubería horizontal de \SI{0.02}{\square\meter} de área en la sección 1 tiene un estrechamiento con un área de \SI{0.01}{\square\meter}. 
 \begin{figure}
     \centering
@@ -326,15 +328,17 @@ Una tubería horizontal de \SI{0.02}{\square\meter} de área en la sección 1 ti
 \end{frame}
 \begin{frame}
 \frametitle{Ejercicio - Ec. de Bernoulli}
-La velocidad en la sección 1 es de \SI[per-mode=symbol]{4}{\meter\per\second} a una presión de \SI{4d5}{\pascal}.
+La velocidad en la sección 1 es de \SI[per-mode=symbol]{4}{\meter\per\second} a una presión de \SI{4d5}{\pascal}. Por la tubería circula agua.
 \\
 \bigskip
 \pause
 ¿Cuál es la velocidad y presión en la sección 2?
 \end{frame}
 \begin{frame}
-\frametitle{Datos del enunciado}
-\begin{minipage}{0.4\linewidth}
+\frametitle{Resolviendo el ejercicio}
+\vspace*{-1cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textocolor{red}{Datos:}
 \begin{align*}
 v_{2} &= ? \\[0.25em]
 P_{2} &= ? \\[0.25em]
@@ -342,16 +346,17 @@ A_{1} &= \SI{0.02}{\square\meter} \\[0.25em]
 A_{2} &= \SI{0.01}{\square\meter} \\[0.25em]
 \end{align*}
 \end{minipage}
-\begin{minipage}{0.4\linewidth}
+\begin{minipage}[t]{0.4\linewidth}
 \begin{align*}
+\rho &= \SI{1000}{\kilo\gram\per\cubic\meter} \\[0.25em]
 v_{1} &= \SI{4}{\meter\per\second} \\[0.25em]
 P_{1} &= \SI{4d5}{\pascal}
 \end{align*}
 \end{minipage}
 \end{frame}
 \begin{frame}
-\frametitle{Expresiones a utilizar}
-Ecuación de continuidad:
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:} Ecuación de continuidad:
 \pause
 \begin{eqnarray*}
 \begin{aligned}
@@ -366,33 +371,34 @@ P_{1} + \rho \, g \, h_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \rho \, g 
 \end{align*}
 \end{frame}
 \begin{frame}
-\frametitle{Sustituciones}
-Ecuación de continuidad:
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:} Ecuación de continuidad:
 \pause
 \begin{eqnarray*}
 \begin{aligned}
-v_{2} &= \dfrac{\left(\SI[per-mode=fraction]{4}{\meter\per\second}\right) \left( \SI{0.02}{\square\meter}\right)}{\SI{0.01}{\square\meter}} = \\[0.5em] \pause
-v_{2} &= \dfrac{\SI{0.08}{\square\meter} \unit[per-mode=fraction]{\meter\per\second}}{\SI{0.01}{\square\meter}} =  \\[0.5em] \pause
+v_{2} &= \dfrac{\left( \displaystyle \SI[per-mode=fraction]{4}{\meter\per\second}\right) \left( \SI{0.02}{\square\meter}\right)}{\SI{0.01}{\square\meter}} = \\[0.5em] \pause
+v_{2} &= \dfrac{ \displaystyle \SI{0.08}{\square\meter} \unit[per-mode=fraction]{\meter\per\second}}{\SI{0.01}{\square\meter}} =  \\[0.5em] \pause
 v_{2} &= \SI[per-mode=fraction]{8}{\meter\per\second}
 \end{aligned}
 \end{eqnarray*}
 \end{frame}
 \begin{frame}
-\frametitle{Sustituciones}
-Ecuación de Bernoulli, \pause En este ejercicio consideramos que las alturas $h_{1}$ y $h_{2}$, son iguales, es decir $h_{1} = h_{2} = h$.
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:} Ecuación de Bernoulli, \pause En este ejercicio consideramos que las alturas $h_{1}$ y $h_{2}$, son iguales, es decir $h_{1} = h_{2} = h$.
 \pause
 \begin{eqnarray*}
 \begin{aligned}
 &P_{1} + \rho \, g \, h + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \rho \, g \, h + \dfrac{1}{2} \rho \, v_{2}^{2} \\[0.5em] \pause
-&P_{1} + \rho \, g \, (h - h) + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \dfrac{1}{2} \rho \, v_{2}^{2} \\[0.5em] \pause
-&P_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \dfrac{1}{2} \rho \, v_{2}^{2}
+&\Rightarrow \hspace{0.4cm} P_{1} + \rho \, g \, (h - h) + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \dfrac{1}{2} \rho \, v_{2}^{2}
 \end{aligned}
 \end{eqnarray*}
 \end{frame}
 \begin{frame}
-\frametitle{Sustituciones}
+\frametitle{Resolviendo el ejercicio}
+\vspace*{-1cm}
 \begin{eqnarray*}
-\begin{aligned}    
+\begin{aligned}
+&P_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \dfrac{1}{2} \rho \, v_{2}^{2} \\[0.5em] \pause
 &P_{2} - P_{1} = \dfrac{1}{2} \rho \, v_{1}^{2} - \dfrac{1}{2} \rho \, v_{2}^{2} \\[0.5em] \pause
 &P_{2} - P_{1} = \dfrac{1}{2} \rho \, \left( v_{1}^{2} - v_{2}^{2} \right) \\[0.5em] \pause
 &P_{2} = \dfrac{1}{2} \rho \, \left( v_{1}^{2} - v_{2}^{2} \right) + P_{1}
@@ -400,7 +406,8 @@ Ecuación de Bernoulli, \pause En este ejercicio consideramos que las alturas $h
 \end{eqnarray*}
 \end{frame}
 \begin{frame}
-\frametitle{Sustituyendo los valores}
+\frametitle{Resolviendo el ejercicio}
+\vspace*{-1cm}
 \begin{eqnarray*}
 \begin{aligned}
 P_{2} &= \dfrac{1}{2} \rho \, \left( v_{1}^{2} - v_{2}^{2} \right) + P_{1} = \\[0.5em] \pause

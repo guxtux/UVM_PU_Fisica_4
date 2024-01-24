@@ -87,7 +87,7 @@ El \textocolor{cornellred}{gasto o caudal} es el volumen de fluido que pasa por 
 El gasto $G$ se expresa de la siguiente manera:
 \pause
 \begin{align*}
-G = \dfrac{V}{t} \hspace{0.75cm} \Rightarrow \hspace{0.75cm} \left[ \unit[per-mode=fraction]{\cubic\meter\per\second} \right]
+G = \dfrac{V}{t} \hspace{0.75cm} \Rightarrow \hspace{0.75cm} \left[ \si[per-mode=fraction]{\cubic\meter\per\second} \right]
 \end{align*}
 \end{frame}
 \begin{frame}
@@ -377,7 +377,7 @@ P_{1} + \rho \, g \, h_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \rho \, g 
 \begin{eqnarray*}
 \begin{aligned}
 v_{2} &= \dfrac{\left( \displaystyle \SI[per-mode=fraction]{4}{\meter\per\second}\right) \left( \SI{0.02}{\square\meter}\right)}{\SI{0.01}{\square\meter}} = \\[0.5em] \pause
-v_{2} &= \dfrac{ \displaystyle \SI{0.08}{\square\meter} \unit[per-mode=fraction]{\meter\per\second}}{\SI{0.01}{\square\meter}} =  \\[0.5em] \pause
+v_{2} &= \dfrac{ \displaystyle \SI{0.08}{\square\meter} \si[per-mode=fraction]{\meter\per\second}}{\SI{0.01}{\square\meter}} =  \\[0.5em] \pause
 v_{2} &= \SI[per-mode=fraction]{8}{\meter\per\second}
 \end{aligned}
 \end{eqnarray*}
@@ -417,5 +417,118 @@ P_{2} &= \SI{3.76d5}{\pascal}
 \end{aligned}
 \end{eqnarray*}
 \end{frame}
+
+\section{Tipos de flujo}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Fluidos en movimiento}
+
+\begin{frame}
+\frametitle{Fluidos en movimiento}
+El \textocolor{byzantine}{flujo laminar} y el \textocolor{ao}{flujo turbulento} son dos regímenes distintos de movimiento de un fluido, \pause se utilizan en la mecánica de fluidos para describir cómo se comporta un fluido en movimiento.
+\end{frame}
+
+\subsection{Flujo laminar} 
+
+\begin{frame}
+\frametitle{Definición}
+En el flujo laminar, las partículas del fluido \textocolor{burgundy}{se mueven en capas o láminas paralelas} sin cruzarse significativamente.
+\end{frame}
+\begin{frame}
+\frametitle{Características} 
+Las partículas se mueven de manera ordenada y predecible.
+\\
+\bigskip
+\pause
+No hay remolinos ni turbulencias notables. \pause La velocidad del fluido en cada capa es constante y su dirección no cambia abruptamente.
+\end{frame}
+\begin{frame}
+\frametitle{Condición de Transición}
+El flujo puede volverse laminar a velocidades bajas y viscosidades altas.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo}
+El flujo de aceite a través de una tubería de pequeño diámetro a velocidades moderadas puede ser laminar.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo flujo sanguíneo}
+En arterias más pequeñas y capilares, donde el flujo es más lento y las paredes de los vasos son más suaves, es más probable que se dé un flujo laminar.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo flujo sanguíneo}
+El flujo es ordenado, capa tras capa, y no hay interrupciones significativas en la dirección del flujo.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo flujo sanguíneo}
+El flujo laminar permite un transporte eficiente de nutrientes y gases a través de las paredes de los vasos sanguíneos hacia los tejidos.
+\end{frame}
+
+\subsection{Flujo turbulento}
+
+\begin{frame}
+\frametitle{Definición}
+En el flujo turbulento, las partículas del fluido \textocolor{cardinal}{se mezclan de manera caótica} y se generan remolinos y fluctuaciones en la velocidad y la presión.
+\end{frame}
+\begin{frame}
+\frametitle{Características}
+Existen vórtices y corrientes cruzadas en el fluido.
+\\
+\bigskip
+\pause
+La velocidad y la dirección del fluido son variables y cambian continuamente. \pause Se producen pérdidas de energía debido a la fricción interna.
+\end{frame}
+\begin{frame}
+\frametitle{Condición de Transición}
+El flujo se vuelve turbulento a velocidades más altas y viscosidades más bajas.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo}
+El agua fluyendo por una cascada o un río con obstáculos puede exhibir flujo turbulento.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo flujo sanguíneo}
+En arterias más grandes y en áreas donde la velocidad del flujo es alta, como en las bifurcaciones y curvas, puede ocurrir el flujo turbulento.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo flujo sanguíneo}
+El flujo es caótico, con remolinos y fluctuaciones en la velocidad y la presión.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo flujo sanguíneo}
+La presencia de \textocolor{bole}{placas ateroscleróticas} puede causar turbulencias y cambios en el flujo sanguíneo.
+\end{frame}
+
+\subsection{Número de Reynolds}
+
+\begin{frame}
+\frametitle{Definición}
+El \textocolor{red}{número de Reynolds (Re)} es un parámetro adimensional utilizado para predecir cuándo un flujo transita de laminar a turbulento.
+\end{frame}
+\begin{frame}
+\frametitle{Definición}
+Se define como la relación entre las fuerzas inerciales y las fuerzas viscosas del fluido.
+\end{frame}
+\begin{frame}
+\frametitle{Rangos para Re}
+Si $Re < 2300$, generalmente indica \textocolor{darkscarlet}{flujo laminar}, \pause mientras que $Re > 4000$ indica \textocolor{debianred}{flujo turbulento}.
+\end{frame}
+\begin{frame}
+\frametitle{Relevancia de Re}
+La transición entre flujo laminar y turbulento es importante en muchos campos de la ciencia e ingeniería.
+\end{frame}
+\begin{frame}
+\frametitle{Relevancia de Re}
+Ya que afecta la eficiencia de:
+\setbeamercolor{item projected}{bg=coquelicot,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Transferencia de calor.
+\item La resistencia al flujo.
+\item Así como otros aspectos del comportamiento del fluido en sistemas como tuberías, conductos y canales.
+\end{enumerate}
+\end{frame}
+
 
 \end{document}

@@ -1,0 +1,126 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Reporte Práctica 5 \\  Física IV (Área II) \vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{Importante:}
+\begin{enumerate}
+\item El reporte completo debe de estar en el formato de Word.
+\item Las tablas que presentes, deben de elaborarse en Word, no se evaluarán reportes que presenten las tablas como imágenes del cuaderno o de hojas.
+\item El reporte es individual.
+\end{enumerate}
+
+\section{Resultados.}
+
+Deberás de elaborar cada tabla (en Word) con los siguientes valores:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c | c |} \hline
+Abertura & Distancia [m] & Tiempo [s] & Alcance [m] \\ \hline
+$h_{1}$ & & & \\ \hline
+$h_{2}$ & & & \\ \hline
+$h_{3}$ & & & \\ \hline    
+\end{tabular}
+\end{table}
+Donde:
+\begin{enumerate}
+\item Distancia: es la distancia que hay de la parte superior de tu envase a la abertura, si mediste en centímetros hay que pasar el valor a metros.
+\item Tiempo: es el tiempo que tardó en llegar el nivel del agua desde la superficie hasta la abertura, se reporta en segundos.
+\item Alcance: es la distancia horizontal que alcanzó el chorro de agua, se reporta en metros.
+\end{enumerate}
+
+En este apartado deberás de aclarar si tuviste algún contratiempo para obtener los datos experimentales, así como la manera en que resolviste ese contratiempo.
+
+\section{Análisis de resultados.}
+
+Para este apartado deberás de obtener:
+\begin{enumerate}[label=\roman*)]
+\item La velocidad del chorro de agua. Para ello hay que ocupar la expresión de Torricelli:
+\begin{align*}
+v = \sqrt{2 \, g \, h}
+\end{align*}
+donde $ g = \SI{9.81}{\meter\per\square\second}$ y $h$ es la altura de la abertura (que ya tienes de la tabla del apartado anterior)
+\item La distancia o alcance del chorro que sale de la abertura. Para ello, recurrimos a la expresión de la mecánica:
+\begin{align*}
+d = \dfrac{\text{velocidad}}{\text{tiempo}}
+\end{align*}
+\end{enumerate}
+Calcula las dos variables y anótalas en la siguiente tabla:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c | c | c |} \hline
+Abertura & Velocidad [m/s] & Tiempo [s] & Alcance Exp. [m] & Alcance Teo. [m] \\ \hline
+$h_{1}$ & & & & \\ \hline
+$h_{2}$ & & & & \\ \hline
+$h_{3}$ & & & & \\ \hline
+\end{tabular}
+\end{table}
+donde:
+\begin{enumerate}
+\item El Alcance Exp. corresponde a Alcance que mediste y que está en la tabla del apartado de Resultados.
+\item El Alcance Teo. corresponde al valor del alcance usando los datos de velocidad y tiempo medido, usando la expresión:
+\begin{align*}
+d = \dfrac{\text{velocidad}}{\text{tiempo}}
+\end{align*}
+\end{enumerate}
+
+\subsection{Cálculo del error relativo.}
+
+Para tener una referencia del error en nuestras mediciones, se calculará el error relativo considerando que el valor teórico del alcance es el valor exacto, habrá que ocupar la siguiente expresión:
+\begin{align*}
+\text{error} = \dfrac{\vert \text{Alcance Teo. - Alcance Exp.} \vert}{\text{Alcance Teo.}}
+\end{align*}
+Las barras corresponden a la función valor absoluto, es decir, que aunque la diferencia tenga un signo negativo, consideramos el resultado como un valor positivo.
+
+Completa la siguiente tabla:
+\begin{table}[H]
+\centering
+\begin{tabular}{ | c | c |} \hline
+Abertura & Error \\ \hline
+$h_{1}$ & \\ \hline
+$h_{2}$ & \\ \hline
+$h_{3}$ & \\ \hline
+\end{tabular}
+\end{table}
+
+Responde ahora las siguientes preguntas:
+\begin{enumerate}[label=\arabic*)]
+\item ¿Cómo explicas que hay diferencia entre los valores experimentales y los teóricos?
+\item ¿Para qué abertura se tuvo el mayor error?
+\item ¿Influyó el diámetro de la abertura para los resultados?
+\item ¿El material del envase favoreció u obstaculizó que los resultados fueran distintos?
+\end{enumerate}
+
+\section{Conclusiones.}
+
+Para este apartado si tomaste evidencia con fotos, podrás incluirlas y responder de manera clara y no con monosílabos:
+\begin{enumerate}[label=\Roman*)]
+\item ¿Se logró el objetivo de la práctica?
+\item ¿La hipótesis se corrobora como cierta?
+\item ¿Alguno de los principios de fluidos ideales afectó en los resultados? ¿Qué principio sería?
+\item ¿Cómo mejorarías el montaje experimental?
+\end{enumerate}
+
+\end{document}

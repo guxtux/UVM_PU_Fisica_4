@@ -1,0 +1,99 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Práctica 6 - Ley de Ohm\\  Física IV (Área II) \vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Análisis de datos.}
+
+\subsection{Resistencias individuales.}
+
+Para cada resistencia calcula el error entre el valor de corriente medido con el multímetro y el obtenido con la ley de Ohm, anota el valor en la siguiente tabla:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c | c | c | } \hline
+Resistencia & R $(\Omega)$ & I multímetro $(\si{\ampere})$ & I fórmula $(\si{\ampere})$ & Error \\ \hline
+$R_{1}$ & & & & \\ \hline
+$R_{2}$ & & & & \\ \hline
+$R_{3}$ & & & & \\ \hline
+\end{tabular}
+\end{table}
+El error lo calculamos de la siguiente manera, consideramos que el valor de corriente que se obtuvo por la ley de Ohm es el correcto:
+\begin{align*}
+\text{error } = \dfrac{\abs{ \, \text{I fórmula} - \text{I multímetro} \, }}{\text{I fórmula}}
+\end{align*}
+En el numerador de la expresión se tiene la función valor absoluto, si la diferencia es negativa, la dejamos con signo negativo y luego hacemos el cociente con el denominador, por lo que siempre el error será un valor positivo.
+
+Responde las siguientes preguntas:
+\begin{enumerate}
+\item ¿Cuál de las tres resistencias tuvo el mayor error en las mediciones de corriente?
+\item ¿A qué se debe?
+\end{enumerate}
+
+\section{Circuito en serie.}
+
+Con los datos que obtuviste en la sesión de montaje del circuito con las resistencias en serie, completa la siguiente tabla en donde tendrás que calcular el error entre las mediciones de corriente, considerando que el valor de corriente con la ley de Ohm es el correcto:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c | >{\centering\arraybackslash}p{3cm} | } \hline
+Resistencia $(\Omega)$ & I multímetro $(\si{\ampere})$ & I fórmula $(\si{\ampere})$ & Error \\ \hline
+ & & & \\ \hline
+\end{tabular}
+\end{table}
+
+Responde las siguientes preguntas:
+\begin{enumerate}
+\item ¿Por qué se tiene un error en los valores de corriente?
+\item En un circuito en serie, ¿el valor de la corriente es el mismo para cada resistencia?
+\item ¿Cómo es el valor del voltaje en cada resistencia?
+\end{enumerate}
+
+\section{Circuito en paralelo.}
+
+Con los datos que obtuviste en la sesión de montaje del circuito con las tres resistencias en paralelo, completa la siguiente tabla en donde tendrás que calcular el error entre las mediciones de corriente, considerando que el valor de corriente con la ley de Ohm es el correcto:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c | >{\centering\arraybackslash}p{3cm} | } \hline
+Resistencia $(\Omega)$ & I multímetro $(\si{\ampere})$ & I fórmula $(\si{\ampere})$ & Error \\ \hline
+ & & & \\ \hline
+\end{tabular}
+\end{table}
+
+Responde las siguientes preguntas:
+\begin{enumerate}
+\item ¿Por qué se tiene un error en los valores de corriente?
+\item En un circuito en paralelo, ¿el valor de la corriente es el mismo para cada resistencia?
+\item ¿Cómo es el valor del voltaje en cada resistencia?
+\end{enumerate}
+
+\section{Conclusiones.}
+
+Responde las siguientes preguntas apoyándote con los apartados que desarrollaste para completar tu reporte:
+\begin{enumerate}
+\item ¿Se logró el objetivo de la práctica?
+\item ¿Se corrobora la hipótesis planteada?
+\item Se trabajo con circuitos en serie y en paralelo por separado, si tuvieras un circuito mixto (con una combinación tanto en serie como en paralelo), ¿cómo comprobarías la ley de Ohm con un circuito de ese tipo?
+\end{enumerate}
+
+\end{document}

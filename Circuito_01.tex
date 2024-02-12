@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{circuitikz}
+\begin{document}
+\begin{center}
+\begin{circuitikz}[american voltages]
+    \draw 
+        (0, 0) to[V=10V] (0, 4)
+        to [R, l=\mbox{$R_1=2 \Omega$}] (4, 4)
+        to [R, l=\mbox{$R_2=7 \Omega$}] (8, 4)
+        to [R, l=\mbox{$R_3=1 \Omega$}] (8, 0)
+        to [R, l=\mbox{$R_4=10 \Omega$}] (4, 0)
+        (4, 4) to [R, l=\mbox{$R_5=6 \Omega$}]  (4, 0)
+        to [R, l=\mbox{$R_6=8 \Omega$}] (0, 0);
+\end{circuitikz}    
+\end{center}
+\end{document}

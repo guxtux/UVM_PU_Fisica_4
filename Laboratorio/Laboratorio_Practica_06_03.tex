@@ -19,73 +19,87 @@
 \decimalpoint
 \sisetup{bracket-numbers = false}
 
-\title{\vspace*{-2cm} Práctica 6 - Ley de Ohm\\  Física IV (Área II) \vspace{-5ex}}
+\title{\vspace*{-2cm} Reporte Práctica 6 - Ley de Ohm\\  Física IV (Área II) \vspace{-5ex}}
 \date{}
 
 \begin{document}
 \maketitle
 
+\section{Datos.}
+
+Deberás de incluir los datos experimentales que se midieron.
+
+\subsection{Primera vez.}
+
+Valores de resistencias.
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | } \hline
+Resistencia & R $(\Omega)$ \\ \hline
+$R_{1}$ & \\ \hline
+$R_{2}$ & \\ \hline
+$R_{3}$ & \\ \hline
+\end{tabular}
+\end{table}
+
+Valor de voltaje directo.
+
+Tipo de pila: \rule{2cm}{0.1mm} Voltaje: \rule{2cm}{0.1mm}
+
+Valor de voltaje alterno.
+
+Voltaje contacto: \rule{2cm}{0.1mm}
+
+\subsection{Segunda vez.}
+
+Valores de resistencias.
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | } \hline
+Resistencia & R $(\Omega)$ \\ \hline
+$R_{1}$ & \\ \hline
+$R_{2}$ & \\ \hline
+$R_{3}$ & \\ \hline
+\end{tabular}
+\end{table}
+
+Valor de voltaje directo.
+
+Tipo de pila: \rule{2cm}{0.1mm} Voltaje: \rule{2cm}{0.1mm}
+
 \section{Análisis de datos.}
 
-\subsection{Resistencias individuales.}
+\subsection{Cálculo de corriente en las resistencias.}
 
-Para cada resistencia calcula el error entre el valor de corriente medido con el multímetro y el obtenido con la ley de Ohm, anota el valor en la siguiente tabla:
+Utilizando el valor de voltaje de la pila y con la ley de Ohm, calcula el valor de la corriente en cada resistencia, ocupa la siguiente tabla (en caso de valores muy pequeños de corriente, será conveniente que uses la notación científica para el valor de corriente):
+
+\subsection*{Primera medición.}
+
+Voltaje pila: \rule{2cm}{0.1mm}
 \begin{table}[H]
 \centering
-\begin{tabular}{| c | c | c | c | c | } \hline
-Resistencia & R $(\Omega)$ & I multímetro $(\si{\ampere})$ & I fórmula $(\si{\ampere})$ & Error \\ \hline
-$R_{1}$ & & & & \\ \hline
-$R_{2}$ & & & & \\ \hline
-$R_{3}$ & & & & \\ \hline
-\end{tabular}
-\end{table}
-El error lo calculamos de la siguiente manera, consideramos que el valor de corriente que se obtuvo por la ley de Ohm es el correcto:
-\begin{align*}
-\text{error } = \dfrac{\abs{ \, \text{I fórmula} - \text{I multímetro} \, }}{\text{I fórmula}}
-\end{align*}
-En el numerador de la expresión se tiene la función valor absoluto, si la diferencia es negativa, la dejamos con signo negativo y luego hacemos el cociente con el denominador, por lo que siempre el error será un valor positivo.
-
-Responde las siguientes preguntas:
-\begin{enumerate}
-\item ¿Cuál de las tres resistencias tuvo el mayor error en las mediciones de corriente?
-\item ¿A qué se debe?
-\end{enumerate}
-
-\section{Circuito en serie.}
-
-Con los datos que obtuviste en la sesión de montaje del circuito con las resistencias en serie, completa la siguiente tabla en donde tendrás que calcular el error entre las mediciones de corriente, considerando que el valor de corriente con la ley de Ohm es el correcto:
-\begin{table}[H]
-\centering
-\begin{tabular}{| c | c | c | >{\centering\arraybackslash}p{3cm} | } \hline
-Resistencia $(\Omega)$ & I multímetro $(\si{\ampere})$ & I fórmula $(\si{\ampere})$ & Error \\ \hline
- & & & \\ \hline
+\begin{tabular}{| c | c | c | } \hline
+Resistencia & R $(\Omega)$ & I fórmula $(\si{\ampere})$ \\ \hline
+$R_{1}$ & & \\ \hline
+$R_{2}$ & & \\ \hline
+$R_{3}$ & & \\ \hline
 \end{tabular}
 \end{table}
 
-Responde las siguientes preguntas:
-\begin{enumerate}
-\item ¿Por qué se tiene un error en los valores de corriente?
-\item En un circuito en serie, ¿el valor de la corriente es el mismo para cada resistencia?
-\item ¿Cómo es el valor del voltaje en cada resistencia?
-\end{enumerate}
+\subsection*{Segunda medición.}
 
-\section{Circuito en paralelo.}
-
-Con los datos que obtuviste en la sesión de montaje del circuito con las tres resistencias en paralelo, completa la siguiente tabla en donde tendrás que calcular el error entre las mediciones de corriente, considerando que el valor de corriente con la ley de Ohm es el correcto:
+Voltaje pila: \rule{2cm}{0.1mm}
 \begin{table}[H]
 \centering
-\begin{tabular}{| c | c | c | >{\centering\arraybackslash}p{3cm} | } \hline
-Resistencia $(\Omega)$ & I multímetro $(\si{\ampere})$ & I fórmula $(\si{\ampere})$ & Error \\ \hline
- & & & \\ \hline
+\begin{tabular}{| c | c | c | } \hline
+Resistencia & R $(\Omega)$ & I fórmula $(\si{\ampere})$ \\ \hline
+$R_{1}$ & & \\ \hline
+$R_{2}$ & & \\ \hline
+$R_{3}$ & & \\ \hline
 \end{tabular}
 \end{table}
 
-Responde las siguientes preguntas:
-\begin{enumerate}
-\item ¿Por qué se tiene un error en los valores de corriente?
-\item En un circuito en paralelo, ¿el valor de la corriente es el mismo para cada resistencia?
-\item ¿Cómo es el valor del voltaje en cada resistencia?
-\end{enumerate}
+Del multímetro que ocupaste en el Laboratorio, revisa si el rango de medición para corriente directa, permitiría medir (o detectar) la corriente que tienes en cada tabla, tendrás que regresar al Laboratorio y pedir la caja para leer la información.
 
 \section{Conclusiones.}
 
@@ -93,7 +107,10 @@ Responde las siguientes preguntas apoyándote con los apartados que desarrollast
 \begin{enumerate}
 \item ¿Se logró el objetivo de la práctica?
 \item ¿Se corrobora la hipótesis planteada?
-\item Se trabajo con circuitos en serie y en paralelo por separado, si tuvieras un circuito mixto (con una combinación tanto en serie como en paralelo), ¿cómo comprobarías la ley de Ohm con un circuito de ese tipo?
+\item Si una pila nos dice que el valor nomimal es de \SI{1.5}{\volt}, ¿por qué tenemos un valor ya sea por debajo o por arriba de ese valor nomimal?
+\item Lo que nos entrega la CFE son entre \SI{110}{\volt} - \SI{120}{\volt}, ¿por qué tenemos una variación en la lectura del multímetro?
 \end{enumerate}
+
+Recuerda que debes de actualizar en el material de tu reporte: el uso del protoboard y del adaptador para los dos pilas AA.
 
 \end{document}

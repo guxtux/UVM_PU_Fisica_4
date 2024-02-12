@@ -1,0 +1,686 @@
+\documentclass[14pt]{beamer}
+\usepackage{./Estilos/BeamerUVM}
+\usepackage{./Estilos/ColoresLatex}
+\usepackage{circuitikz}
+\input{Preambulos/preambulo_Beamer_Cambridge_wolverine}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+\DeclareSIUnit\erg{erg}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+\sisetup{per-mode=symbol}
+\resetcounteronoverlays{saveenumi}
+
+% Macro para agregar el logo de UVM en cada slide de la presentación
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate (logo) at ([xshift=-1.5cm,yshift=-0.8cm]current page.north east);
+% \fill[devryblue] (logo) circle (.9cm);
+% \clip (logo) circle (.75cm);
+\node at (logo) {\includegraphics[width=2.1cm]{Imagenes/logo_UVM.png}};
+\end{tikzpicture}}
+
+
+\title{\Large{Circuitos eléctricos} \\ \normalsize{Física IV (Área II)}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame[allowframebreaks]{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{Circuitos eléctricos}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Definición}
+
+\begin{frame}
+\frametitle{¿Qué es un circuito eléctrico?}
+Los circuitos eléctricos son sistemas que permiten la circulación de corriente eléctrica para realizar diversas funciones, \pause como proporcionar energía, realizar tareas específicas o transmitir información.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es un circuito eléctrico?}
+Un circuito eléctrico típico consta de varios componentes interconectados, \pause y la teoría de circuitos eléctricos se basa en principios fundamentales que describen cómo interactúan estos componentes.
+\end{frame}
+
+\subsection{Componentes}
+
+\begin{frame}
+\frametitle{Fuente de Alimentación}
+Proporciona la energía eléctrica al circuito.
+\\
+\bigskip
+\pause
+Puede ser una batería, un generador o cualquier dispositivo que suministre voltaje.
+\end{frame}
+\begin{frame}
+\frametitle{Cables o Conductores}
+Permiten que la corriente eléctrica fluya desde la fuente de alimentación hasta los dispositivos y componentes del circuito.
+\end{frame}
+\begin{frame}
+\frametitle{Cables o Conductores}    
+Los cables están hechos de materiales conductores como el cobre.
+\end{frame}
+\begin{frame}
+\frametitle{Interruptor}
+Abre o cierra el circuito, permitiendo o deteniendo el flujo de corriente.
+\end{frame}
+\begin{frame}
+\frametitle{Interruptor}
+Es un dispositivo de control que puede estar en posición abierta (apagado) o cerrada (encendido).
+\end{frame}
+\begin{frame}
+\frametitle{Resistencia}
+Limita el flujo de corriente en el circuito.
+\\
+\bigskip
+\pause
+Se mide en ohms $(\Omega)$ y se representa con el símbolo $R$.
+\end{frame}
+\begin{frame}
+\frametitle{Capacitor}
+Almacena carga eléctrica y libera esa carga cuando sea necesario.
+\\
+\bigskip
+\pause
+Su unidad es el Farad $(F)$ y se representa con el símbolo $C$.
+\end{frame}
+\begin{frame}
+\frametitle{Bobina o Inductor}
+Almacena energía en forma de campo magnético cuando la corriente fluye a través de ella.
+\end{frame}
+\begin{frame}
+\frametitle{Bobina o Inductor}
+Se mide en Henry $(H)$ y se representa con el símbolo $L$.
+\end{frame}
+\begin{frame}
+\frametitle{Diodo}
+Permite el flujo de corriente en una dirección \pause y bloquea en la dirección opuesta.
+\\
+\bigskip
+\pause
+Se utiliza para rectificación, entre otros propósitos.
+\end{frame}
+
+\subsection{Tipos de circuitos}
+
+\begin{frame}
+\frametitle{Circuitos en serie}
+Los componentes están conectados en una única trayectoria, \pause la corriente tiene que pasar a través de cada componente.
+\end{frame}
+\begin{frame}
+\frametitle{Circuito en serie}
+\begin{figure}
+\centering
+\begin{circuitikz}
+ \draw (0,0) to[R=$R_{1}$] (2,0) to[R=$R_{2}$] (4,0) to[R=$R_{3}$] (6,0);
+ \draw (0,0)--(0,-2) to[battery1={9 V}] (6,-2)--(6,0);
+\end{circuitikz}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{La corriente en un circuito serie}
+Como se mencionó, la corriente en el circuito serie es la misma en todos los elementos que lo componen.
+\pause
+\begin{align*}
+I_{T} = I_{1} = I_{2} = I_{3} = \ldots
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{El voltaje en un circuito serie}
+El voltaje total se \enquote{divide} en cada componente del circuito, es decir:
+\pause
+\begin{align*}
+V_{T} = V_{1} + V_{2} + V_{3} + \ldots 
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{La resistencia total}
+En un circuito en serie, la resistencia total es:
+\pause
+\begin{align*}
+R_{T} = R_{1} + R_{2} + R_{3} + \ldots
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Circuitos en paralelo}
+Los componentes están conectados en múltiples trayectorias, \pause y la corriente se divide entre ellos.
+\end{frame}
+\begin{frame}
+\frametitle{Circuito en paralelo}
+\vspace*{-1cm}
+\begin{figure}
+\centering
+\begin{circuitikz}[scale=0.9]
+    \draw (0,0) to[R=$R_{1}$] (2,0);
+    \draw (0,-2) to[R=$R_{2}$] (2,-2);
+    \draw (0,-4)  to[R=$R_{3}$] (2,-4);
+    \draw (0,0)--(0,-6) (2,0)--(2,-6);
+    \draw (0,-6) to[battery1={9 V}] (2,-6);
+   \end{circuitikz}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{La resistencia total}
+En el circuito en paralelo, la resistencia total es:
+\pause
+\begin{align*}
+\dfrac{1}{R_{T}} = \dfrac{1}{R_{1}} + \dfrac{1}{R_{2}} + \dfrac{1}{R_{3}} + \ldots
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{El voltaje en un circuito en paralelo}
+En un circuito en paralelo, el voltaje es el mismo en cada componente:
+\pause
+\begin{align*}
+V_{T} = V_{1} = V_{2} = V_{3} = \ldots
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{La corriente en un circuito paralelo}
+La corriente en el circuito paralelo se \enquote{divide} en todos los elementos que lo componen.
+\end{frame}
+\begin{frame}
+\frametitle{El corriente en un circuito paralelo}
+La corriente total se \enquote{divide} en cada componente del circuito, es decir:
+\pause
+\begin{align*}
+I_{T} = I_{1} + I_{2} + I_{3} + \ldots 
+\end{align*}
+\end{frame}
+
+\subsection{Circuito mixto}
+
+\begin{frame}
+\frametitle{Circuitos mixtos}
+Contienen combinaciones de circuitos en serie y en paralelo.
+\end{frame}
+\begin{frame}
+\frametitle{Circuito mixto}
+\vspace*{-1cm}
+\begin{figure}
+\centering
+\begin{circuitikz}
+\draw (0,0) to[battery1={9 V}]    (0,4) % La fuente de voltaje
+            to[R=$R_{1}$] (4,4)
+            to[R=$R_{2}$]  (4,0) % La resistencia
+            to[short]       (3,0)
+            to[short]       (3,.5)
+            to [R, a=$R_{3}$] (1,.5)  |-  (0,0) % <---
+        (3,0) to[short]       (3,-.5)
+            to [R=$R_{4}$] (1,-.5)             % <----
+            to [short]      (1,0);
+    \end{circuitikz}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{¿Cómo se resuelve?}
+Para obtener la resistencia total:
+\setbeamercolor{item projected}{bg=lava,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Se resuelven primero aquellas partes del circuito que estén conectadas en paralelo.
+\item Se anota como una resistencia equivalente, con un subíndice: $R_{E1}$.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Circuito mixto}
+\vspace*{-1cm}
+\begin{figure}
+\centering
+\begin{circuitikz}
+\draw (0,0) to[battery1={9 V}]    (0,4) % La fuente de voltaje
+            to[R=$R_{1}$] (4,4)
+            to[R=$R_{2}$]  (4,0) % La resistencia
+            to[short]       (3,0)
+            % to[short]       (3,.5)
+            to [R, a=$R_{E1}$] (1, 0)  |-  (0,0) % <---
+            to [short]      (1, 0);
+    \end{circuitikz}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{¿Cómo se resuelve?}
+\setbeamercolor{item projected}{bg=lava,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Buscando dejar un circuito ya sea en serie, o en paralelo, representando una sola resistencia: la resistencia total $R_{T}$
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Circuito mixto}
+\vspace*{-1cm}
+\begin{figure}
+\centering
+\begin{circuitikz}
+\draw (0, 0) to[battery1={9 V}]    (0, 3) % La fuente de voltaje
+            % to[R=$R_{1}$] (4,4)
+            to[short]      (3, 3)
+            to[R=$R_{T}$]  (3, 0) % La resistencia
+            % to[short]       (3,.5)
+            % to [R, a=$R_{E1}$] (1, 0)  |-  (0,0) % <---
+            to [short]      (0, 0);
+    \end{circuitikz}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{¿Cómo se resuelve?}
+\setbeamercolor{item projected}{bg=lava,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Una vez conocida la resistencia total $(R_{T})$, por la ley de Ohm, se conocerá la corriente total $(I_{T})$
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{¿Cómo se resuelve?}
+\setbeamercolor{item projected}{bg=lava,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Se procede a calcular la corriente y voltaje de cada componente de manera inversa a como se resolvió el circuito.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo un ejercicio}
+Veamos el procedimiento para calcular el voltaje y la corriente que circula por cada una de las resistencias del siguiente circuito mixto.
+\\
+\bigskip
+\pause
+Todas las resistencias valen \SI{10}{\ohm}
+\end{frame}
+\begin{frame}[plain]
+\begin{figure}
+\centering
+\begin{circuitikz}
+    \draw (0, 0) to[battery1={10 V}] (0, 4) % La fuente de voltaje
+        to[R=$R_{1}$] (4, 4)
+        to[short] (4, 3.5)
+        to[short] (3.5, 3.5) |- (4.5, 3.5)
+        to[short] (4.5, 3)
+        to[R=$R_{3}$] (4.5, 1)
+        to[R=$R_{4}$] (4.5, -1)
+        to[short] (4, -1)
+        to[short] (4, -2)
+        to[short] (3, -2)
+        to[short] (3, -2.5) |- (3, -1.5)
+        to[R, l_=$R_{5}$] (1, -1.5)
+        to[short] (1, -2) -- (0, -2) -- (0, 0);
+    
+    \draw (1, -2) to[short] (1, -2.5)
+        to[R, l_=$R_{6}$] (3, -2.5);
+    
+    \draw (3.5, 3.5) to[R, l_=$R_{2}$] (3.5, -1) -- (4, -1);
+\end{circuitikz}
+\end{figure}    
+\end{frame}
+\begin{frame}
+\frametitle{Comenzando a simplificar}
+Nos fijamos en las resistencias $R_{3}$ y $R_{4}$ que están conectadas en serie.
+\\
+\bigskip
+\pause
+La suma de esas resistencias será la resistencia equivalente $R_{E1}$.
+\end{frame}
+\begin{frame}[plain]
+\begin{figure}
+\centering
+\begin{circuitikz}
+    \draw (0, 0) to[battery1={10 V}] (0, 4) % La fuente de voltaje
+        to[R=$R_{1}$] (4, 4)
+        to[short] (4, 3.5)
+        to[short] (3.5, 3.5) |- (4.5, 3.5)
+        to[short] (4.5, 3)
+        to[R=$R_{3}$] (4.5, 1)
+        to[R=$R_{4}$] (4.5, -1)
+        to[short] (4, -1)
+        to[short] (4, -2)
+        to[short] (3, -2)
+        to[short] (3, -2.5) |- (3, -1.5)
+        to[R, l_=$R_{5}$] (1, -1.5)
+        to[short] (1, -2) -- (0, -2) -- (0, 0);
+    
+    \draw (1, -2) to[short] (1, -2.5)
+        to[R, l_=$R_{6}$] (3, -2.5);
+    
+    \draw (3.5, 3.5) to[R, l_=$R_{2}$] (3.5, -1) -- (4, -1);
+
+    \draw [red, thick] (4.2, 3.25) rectangle (4.8, -1.25);
+\end{circuitikz}
+\end{figure}    
+\end{frame}
+\begin{frame}
+\frametitle{La resistencia equivalente}
+Al estar $R_{3}$ y $R_{4}$ en serie, la resistencia equivalente es:
+\pause
+\begin{align*}
+R_{E1} = R_{1} + R_{2} = \SI{10}{\ohm} + \SI{10}{\ohm} = \SI{20}{\ohm}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Segunda resistencia equivalente}
+Ahora tenemos que $R_{2}$ y $R_{E1}$ están en paralelo, por lo que procedemos a calcular la resistencia equivalente $R_{E2}$
+\end{frame}
+\begin{frame}[plain]
+\begin{figure}
+\centering
+\begin{circuitikz}
+    \draw (0, 0) to[battery1={10 V}] (0, 4) % La fuente de voltaje
+        to[R=$R_{1}$] (4, 4)
+        to[short] (4, 3.5)
+        to[short] (3.5, 3.5) |- (4.5, 3.5)
+        to[short] (4.5, 3)
+        to[R=$R_{E1}$] (4.5, -1)
+        % to[R=$R_{4}$] (4.5, -1)
+        to[short] (4, -1)
+        to[short] (4, -2)
+        to[short] (3, -2)
+        to[short] (3, -2.5) |- (3, -1.5)
+        to[R, l_=$R_{5}$] (1, -1.5)
+        to[short] (1, -2) -- (0, -2) -- (0, 0);
+    
+    \draw (1, -2) to[short] (1, -2.5)
+        to[R, l_=$R_{6}$] (3, -2.5);
+    
+    \draw (3.5, 3.5) to[R, l_=$R_{2}$] (3.5, -1) -- (4, -1);
+
+    \draw [red, thick] (3.2, 3.75) rectangle (4.8, -1.25);
+\end{circuitikz}
+\end{figure}    
+\end{frame}
+\begin{frame}
+\frametitle{La resistencia equivalente $R_{E2}$}
+\vspace*{-1cm}
+Como $R_{2}$ y $R_{E1}$ están en paralelo, la resistencia equivalente $R_{E2}$ es:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\dfrac{1}{R_{E2}} &= \dfrac{1}{R_{2}} + \dfrac{1}{R_{E1}} \\[0.1em] \pause
+R_{E2} &= \dfrac{1}{\dfrac{1}{R_{2}} + \dfrac{1}{R_{E1}}} = \pause \dfrac{1}{\dfrac{1}{\SI{10}{\ohm}} + \dfrac{1}{\SI{20}{\ohm}}} = \pause \dfrac{1}{\dfrac{3}{20} \si{\ohm}} = \\[1em] \pause
+R_{E2} &= \SI{6.66}{\ohm}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}[plain]
+    \begin{figure}
+    \centering
+    \begin{circuitikz}
+    \draw (0, 0) to[battery1={10 V}] (0, 4) % La fuente de voltaje
+        to[R=$R_{1}$] (4, 4)
+        % to[short] (4, 3.5)
+        % to[short] (3.5, 3.5) |- (4.5, 3.5)
+        to[short] (4, 3)
+        to[R=$R_{E2}$] (4, -1)
+        % to[R=$R_{4}$] (4.5, -1)
+        to[short] (4, -1)
+        to[short] (4, -2)
+        to[short] (3, -2)
+        to[short] (3, -2.5) |- (3, -1.5)
+        to[R, l_=$R_{5}$] (1, -1.5)
+        to[short] (1, -2) -- (0, -2) -- (0, 0);
+    
+    \draw (1, -2) to[short] (1, -2.5)
+        to[R, l_=$R_{6}$] (3, -2.5);
+    
+    % \draw (3.5, 3.5) to[R, l_=$R_{2}$] (3.5, -1) -- (4, -1);
+
+    % \draw [red, thick] (3.2, 3.75) rectangle (4.8, -1.25);
+\end{circuitikz}
+\end{figure}    
+\end{frame}
+\begin{frame}
+\frametitle{La siguiente resistencia equivalente}
+Ahora tenemos en el circuito las resistencias $R_{5}$ y $R_{6}$ en paralelo, al resolverlas, tendremos la resistencia equivalente $R_{E3}$.
+\end{frame}
+\begin{frame}
+\frametitle{Encontrando $R_{3}$}
+\begin{eqnarray*}
+\begin{aligned}
+\dfrac{1}{R_{E3}} &= \dfrac{1}{R_{5}} + \dfrac{1}{R_{6}} \\[1em] \pause
+R_{E3} &= \dfrac{1}{\dfrac{1}{R_{5}} + \dfrac{1}{R_{6}}} = \pause \dfrac{1}{\dfrac{1}{\SI{10}{\ohm}} + \dfrac{1}{\SI{10}{\ohm}}} = \pause \dfrac{1}{\dfrac{1}{5} \si{\ohm}} \\[1em] \pause
+R_{E3} &= \SI{5}{\ohm}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}[plain]
+\begin{figure}
+\centering
+\begin{circuitikz}
+\draw (0, 0) to[battery1={10 V}] (0, 4) % La fuente de voltaje
+    to[R=$R_{1}$] (4, 4)
+    % to[short] (4, 3.5)
+    % to[short] (3.5, 3.5) |- (4.5, 3.5)
+    to[short] (4, 3)
+    to[R=$R_{E2}$] (4, -1)
+    % to[R=$R_{4}$] (4.5, -1)
+    to[short] (4, -1)
+    to[short] (4, -2)
+    to[short] (3, -2)
+    % to[short] (3, -2.5) |- (3, -1.5)
+    to[R, l_=$R_{E3}$] (1, -2)
+    to[short] (0, -2) -- (0, 0) ;
+
+% \draw (1, -2) to[short] (1, -2.5)
+%     to[R, l_=$R_{6}$] (3, -2.5);
+
+% \draw (3.5, 3.5) to[R, l_=$R_{2}$] (3.5, -1) -- (4, -1);
+
+% \draw [red, thick] (3.2, 3.75) rectangle (4.8, -1.25);
+\end{circuitikz}
+\end{figure}    
+\end{frame}
+\begin{frame}
+\frametitle{Resistencia total}
+Hemos llegado a tres resistencias conectadas en serie, que al resolverlas, tendremos la resistencia total del circuito $R_{T}$.
+\end{frame}
+\begin{frame}
+\frametitle{Resistencia total}
+\begin{figure}
+\centering
+\begin{circuitikz}
+\draw (0, 0) to[battery1={10 V}] (0, 4) % La fuente de voltaje
+    to[short] (3, 4)
+    to[R=$R_{T}$] (3, 0) -- (0, 0);
+\end{circuitikz}
+\end{figure}    
+\end{frame}
+
+\begin{frame}
+\frametitle{Resistencia total}
+\begin{align*}
+R_{T} &= R_{1} + R_{E2} + R_{E3} = \\[1em]
+R_{T} &= \SI{10}{\ohm} + \SI{6.6}{\ohm} + \SI{5}{\ohm} = \\[0.5em]
+R_{T} &= \SI{21.6}{\ohm}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Siguiente paso}
+Ocupamos la ley de Ohm para resolver la corriente en la resistencia total:
+\pause
+\begin{align*}
+I_{T} = \dfrac{V}{R_{T}} = \dfrac{\SI{10}{\volt}}{\SI{21.6}{\ohm}} = \SI{0.462}{\ampere}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Calculando valores en las resistencias}
+El procedimiento a seguir será de manera inversa y considerando la configuración que tengamos, \pause es decir, \pause ahora vemos el circuito con tres resistencias en serie:
+\end{frame}
+\begin{frame}[plain]
+\begin{figure}
+\centering
+\begin{circuitikz}
+\draw (0, 0) to[battery1={10 V}] (0, 4) % La fuente de voltaje
+    to[R=$R_{1}$] (4, 4)
+    to[short] (4, 3)
+    to[R=$R_{E2}$] (4, -1)
+    to[short] (4, -1)
+    to[short] (4, -2)
+    to[short] (3, -2)
+    to[R, l_=$R_{E3}$] (1, -2)
+    to[short] (0, -2) -- (0, 0) ;
+\end{circuitikz}
+\end{figure}    
+\end{frame}
+\begin{frame}
+\frametitle{Valor de voltaje}
+Sabemos que en un circuito en serie con tres resistencias:
+\pause
+\begin{align*}
+V_{T} &= V_{1} + V_{E2} + V_{E3} \\[1em]
+I_{T} &= I_{1} = I_{E1} = I_{E2}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Valores de corriente}
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c }
+Resistencia & Corriente \\ \hline
+$R_{1}$ & \SI{0.462}{\ampere} \\ \hline
+$R_{E1}$ & \SI{0.462}{\ampere} \\ \hline
+$R_{E2}$ & \SI{0.462}{\ampere} \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+\begin{frame}
+\frametitle{Valores de voltaje}
+Con la ley de Ohm, calculamos el valor de voltaje para cada una de estas resistencias:
+\end{frame}
+\begin{frame}
+\frametitle{Valores de voltaje}
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c | c}
+Resistencia & Expresión & Voltaje \\ \hline
+$R_{1}$ & $V_{1} = (\SI{0.462}{\ampere})(\SI{10}{\ohm})$ & \SI{4.62}{\volt} \\ \hline
+$R_{E2}$ & $V_{E2} = (\SI{0.462}{\ampere})(\SI{6.6}{\ohm})$ & \SI{3.049}{\volt} \\ \hline
+$R_{E3}$ & $V_{E3} = (\SI{0.462}{\ampere})(\SI{5}{\ohm})$ & \SI{2.31}{\volt} \\ \hline
+\end{tabular}
+\end{table}    
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo $R_{E2}$}
+Como ya se tiene el voltaje de la resistencia equivalente $R_{E2}$, \pause podemos obtener los valores de corriente y voltaje de las resistencias $R_{2}$ y $R_{E1}$ que están en paralelo.
+\pause
+\begin{align*}
+V_{E2} = V_{2} = V_{E1}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Valores de voltaje}
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c }
+Resistencia & Voltaje \\ \hline
+$R_{2}$ & $V_{2} = \SI{3.049}{\volt}$ \\ \hline
+$R_{E1}$ & $V_{E1} = \SI{3.049}{\volt}$ \\ \hline
+\end{tabular}
+\end{table}    
+\end{frame}
+\begin{frame}
+\frametitle{Valores de corriente}
+Obtenemos la corriente usando la ley de Ohm:
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c | c}
+Resistencia & Expresión & Corriente \\ \hline
+$R_{2}$ & $I_{2} = \dfrac{\SI{3.049}{\volt}}{\SI{10}{\ohm}}$ & \SI{0.304}{\ampere} \\ \hline
+$R_{E1}$ & $I_{E1} = \dfrac{\SI{3.049}{\volt}}{\SI{6.6}{\ohm}}$ & \SI{0.1524}{\ampere} \\ \hline
+\end{tabular}
+\end{table}    
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo $R_{E1}$}
+La resistencia $R_{E1}$ corresponde a las resistencias en serie $R_{3}$ y $R_{4}$, por lo que posible obtener sus valores de corriente y voltaje.
+\end{frame}
+\begin{frame}
+\frametitle{Valores de corriente}
+\vspace*{-1cm}
+\[ I_{E1} = I_{3} = I_{4} \]
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c }
+Resistencia & Corriente \\ \hline
+$R_{3}$ & $I_{3} = \SI{0.4619}{\ampere}$ \\ \hline
+$R_{4}$ & $I_{4} = \SI{0.4619}{\ampere}$ \\ \hline
+\end{tabular}
+\end{table}    
+\end{frame}
+\begin{frame}
+\frametitle{Valores de voltaje}
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c | c}
+Resistencia & Expresión & Voltaje \\ \hline
+$R_{3}$ & $V_{3} = (\SI{0.1524}{\ampere})(\SI{10}{\ohm})$ & \SI{01.524}{\volt} \\ \hline
+$R_{4}$ & $V_{4} = (\SI{0.1524}{\ampere})(\SI{10}{\ohm})$ & \SI{01.524}{\volt} \\ \hline
+\end{tabular}
+\end{table}    
+\end{frame}
+\begin{frame}
+\frametitle{Valores en $R_{E3}$}
+Nos resta calcular los valores de corriente y voltaje en $R_{E3}$, que la conforman las resistencias $R_{5}$ y $R_{6}$ conectadas en paralelo.
+\end{frame}
+\begin{frame}
+\frametitle{Valores de voltaje}
+\vspace*{-1cm}
+\[ V_{E3} = V_{5} = V_{6} \]
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c }
+Resistencia & Corriente \\ \hline
+$R_{5}$ & $V_{5} = \SI{2.31}{\volt}$ \\ \hline
+$R_{6}$ & $V_{6} = \SI{2.31}{\volt}$ \\ \hline
+\end{tabular}
+\end{table}    
+\end{frame}
+\begin{frame}
+\frametitle{Valores de corriente}
+Obtenemos la corriente usando la ley de Ohm:
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c | c}
+Resistencia & Expresión & Corriente \\ \hline
+$R_{5}$ & $I_{5} = \dfrac{\SI{2.31}{\volt}}{\SI{10}{\ohm}}$ & \SI{0.231}{\ampere} \\ \hline
+$R_{6}$ & $I_{6} = \dfrac{\SI{2.31}{\volt}}{\SI{10}{\ohm}}$ & \SI{0.231}{\ampere} \\ \hline
+\end{tabular}
+\end{table}    
+\end{frame}
+\begin{frame}
+\frametitle{Trabajo completo}
+Ya se han calculado las corrientes y voltajes en cada una de las resistencias del circuito mixto, se aconseja presentar una tabla con los valores.
+\end{frame}
+\begin{frame}
+\frametitle{Valores para las resistencias}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{| c | c | c |} \hline
+Resistencia & Voltaje & Corriente \\ \hline
+$R_{1}$ & \SI{4.620}{\volt} & \SI{0.462}{\ampere} \\ \hline
+$R_{2}$ & \SI{3.049}{\volt} & \SI{0.304}{\ampere} \\ \hline
+$R_{3}$ & \SI{1.524}{\volt} & \SI{0.1524}{\ampere} \\ \hline
+$R_{4}$ & \SI{1.524}{\volt} & \SI{0.1524}{\ampere} \\ \hline
+$R_{5}$ & \SI{2.31}{\volt} & \SI{0.231}{\ampere} \\ \hline
+$R_{6}$ & \SI{2.31}{\volt} & \SI{0.231}{\ampere} \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+\end{document}

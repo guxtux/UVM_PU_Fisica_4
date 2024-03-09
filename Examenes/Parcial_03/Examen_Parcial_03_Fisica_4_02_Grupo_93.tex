@@ -1,0 +1,268 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{paralist}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{circuitikz}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+
+\begin{document}
+\includepdf[pages={1}]{Caratula_Examen_Parcial_03_PU_Fisica_4_02.pdf}
+
+\newpage
+
+\begin{questions}
+    
+    \section{(9 puntos) Electricidad.}
+
+    \question \textbf{(1 punto)} Relaciona las unidades de las siguientes cantidades, una columna con la otra.
+    \\
+    \begin{minipage}[t]{0.4\linewidth}
+        \begin{enumerate}[label=\arabic*)]
+            \item Corriente.
+            \item Resistencia.
+            \item Voltaje.
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\linewidth}
+        \begin{enumerate}[label=\alph*)]
+            \item Watt (\si{\watt})
+            \item Ohm (\si{\ohm})
+            \item Volt (\si{\volt})
+            \item Ampere (\si{\ampere})
+        \end{enumerate}
+    \end{minipage}
+    \begin{tasks}(4)
+        \task 1-a, 2-d, 3-c
+        \task 1-d, 2-b, 3-c
+        \task 1-d, 2-a, 3-c
+        \task 1-a, 2-c, 3-b
+    \end{tasks}
+    \question \textbf{(1 punto)} El flujo de las partículas cargadas en un conductor es lo que se conoce como \rule{2cm}{0.1mm}.
+    \begin{tasks}(4)
+        \task Corriente.
+        \task Resistencia.
+        \task Voltaje.
+        \task Potencia.
+    \end{tasks}
+    \question \textbf{(1 punto)} \label{Problema_01} \textbf{Ejercicio de ejecución: } Determina la intensidad de la corriente eléctrica a través de una resistencia de \SI{250}{\ohm} al aplicarle una diferencia de potencial de \SI{1220}{\volt}.
+    \begin{tasks}(4)
+        \task \SI{0.208}{\ampere}
+        \task \SI{4.880}{\ampere}
+        \task \SI{6.125}{\ampere}
+        \task \SI{0.880}{\ampere}
+    \end{tasks}
+    \question \textbf{(1 punto)} En el siguiente circuito eléctrico se tienen $n$ resistencias del mismo valor conectadas en paralelo, ¿cuál es el valor de la resistencia total $(R_{T})$ del circuito entre los puntos $A^{\prime}$ y $B^{\prime}$?
+    \begin{center}
+    \begin{circuitikz}[american voltages]
+        \draw 
+            (0, 0) node [anchor=east] {$A^{\prime}$}
+            to[short, o-] (2, 0)
+            % (0, 0) to[V=10V] (0, 4)
+            to [R, l=\mbox{$R$}] (2, -2)
+            to [short, -o] (0, -2)
+            (-0.75, -2) node [anchor=west]{$B^{\prime}$};
+        \draw (2, 0) to [short] (4, 0)
+            to [R, l=\mbox{$R$}] (4, -2)
+            to [short] (2, -2);
+        \draw (4, 0) to [short] (6, 0)
+        to [R, l=\mbox{$R$}] (6, -2)
+        to [short] (4, -2);
+        \draw (6, 0) -- (8, 0) node[midway,fill=white,inner sep=5,scale=1.2] {$.\,.\,.$};
+        \draw (6, -2) -- (8, -2) node[midway,fill=white,inner sep=5,scale=1.2] {$.\,.\,.$};
+    \end{circuitikz}  
+    \end{center}
+    \begin{tasks}(4)
+        \task $R_{T} = n^{2} \, R$
+        \task $R_{T} = n + R$
+        \task $R_{T} = n \, R$
+        \task $R_{T} = \dfrac{R}{n}$
+    \end{tasks}
+    \question \textbf{(1 punto)} En un circuito serie $RC$, se tiene que $R = \SI{10}{\mega\ohm}$ y $C = \SI{1}{\pico\farad}$. ¿Cuál es la constante de tiempo del circuito?
+    \begin{tasks}(4)
+        \task \SI{1.00}{\second}
+        \task \SI{0.01}{\second}
+        \task \SI{1.50}{\second}
+        \task \SI{1.35}{\second}
+    \end{tasks}
+    \question \textbf{(1 punto)} \label{Problema_02} \textbf{Ejercicio de ejecución: } Calcula la reactancia capacitiva del siguiente capacitor:
+    \begin{center}
+        \begin{circuitikz}[american voltages]
+            \draw 
+                (0, 0) to[short, o-] (1, 0)
+                to [C, l=\mbox{$C=\SI{40}{\micro\farad}$}] (3, 0)
+                to[short, -o] (4, 0);
+            \node at (2, -0.75) {$\omega = \SI{60}{\radian\per\second}$};
+        \end{circuitikz}  
+    \end{center}
+    \begin{tasks}(4)
+        \task \SI{1500.9}{\ohm}
+        \task \SI{1452.4}{\ohm}
+        \task \SI{1370.7}{\ohm}
+        \task \SI{1666.66}{\ohm}
+    \end{tasks}
+    \question \textbf{(1 punto)} En un circuito \rule{2cm}{0.1mm} la corriente se atrasa \ang{90} con respecto al voltaje:
+    \begin{tasks}(4)
+        \task $R \, C$
+        \task $R \, L$
+        \task $R \, L \, C$
+        \task $R$
+    \end{tasks}
+
+    \newpage
+
+    \question \textbf{(1 punto)} En un circuito en serie una resistencia $R = \SI{250}{\ohm}$ y un capacitor $C = \SI{20}{\micro\farad}$ están conectados a una fuente de voltaje $v = \num 360 \, \cos 500 \, t$ Volts. ¿Cuál es el valor de la impedancia compleja?
+    \begin{multicols}{2}
+        \begin{enumerate}[label=\Alph*)]
+            \item $Z = \SI{250}{\ohm} - j \, \SI{100}{\ohm}$
+            \item $Z = \sqrt{250} \, \si{\ohm} - j \, \SI{100}{\ohm}$
+            \item $Z = \SI{250}{\ohm} + j \, \sqrt{100} \, \si{\ohm}$
+            \item $Z = \SI{250}{\ohm} + j \, \SI{100}{\ohm}$
+        \end{enumerate}
+    \end{multicols}
+    \question \textbf{(1 punto)} Una resistencia $R = \SI{1.78}{\kilo\ohm}$ y un inductor $L = \SI{15}{\henry}$ se conectan en serie. La diferencia de potencial es $V = \num{250} \, \cos 185 \, t$ \, Volts. ¿Cuál es la magnitud de la impedancia $Z$?
+    \begin{tasks}(4)
+        \task \SI{1499}{\ohm}
+        \task \SI{9805}{\ohm}
+        \task \SI{2775}{\ohm}
+        \task \SI{2247}{\ohm}
+    \end{tasks}
+
+    \section{(6 puntos) Hidrodinámica.}
+
+    \question\textbf{(1 punto)} En la siguiente figura se presenta el flujo \rule{2cm}{0.1mm} en un conducto.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.8]{Flujo_01_Turbulento.png}
+    \end{figure}
+    \begin{tasks}(4)
+        \task laminar
+        \task seccionado
+        \task estático
+        \task turbulento
+    \end{tasks}
+    \question\textbf{(1 punto)} En la hidrodinámica un fluido se considera ideal cuando:
+    \begin{parts}
+        \part La densidad es función del tiempo.
+        \part Las fuerzas son conservativas.
+        \part Las partículas solo tienes movimiento de traslación.
+        \part La temperatura del fluido varía con la velocidad.
+    \end{parts}
+    \question\textbf{(1 punto)} \label{Problema_03} \textbf{Ejercicio de ejecución: } En el cuerpo humano el flujo sanguíneo es de $5$ litros de sangre por minuto. ¿Cuál es el área de la sección transversal de la aorta, si la sangre en ese vaso tiene una velocidad de \SI{28}{\centi\meter\per\second}?
+    \begin{tasks}(4)
+        \task \SI{3.10}{\square\centi\meter}
+        \task \SI{2.77}{\square\centi\meter}
+        \task \SI{2.97}{\square\centi\meter}
+        \task \SI{1.77}{\square\centi\meter}
+    \end{tasks}
+
+    \newpage
+
+    \question\textbf{(1 punto)} La ecuación de Bernoulli que se muestra a continuación contiene tres términos de cada lado de la igualdad:
+    \begin{align*}
+    \underbrace{P_{1}}_{\text{\large{a}}} + \rho \, g \, h_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \underbrace{\rho \, g \, h_{2}}_{\text{\large{b}}} + \underbrace{\dfrac{1}{2} \rho \, v_{2}^{2}}_{\text{\large{c}}}
+    \end{align*}
+        
+    \vspace{0.5em}
+    \begin{inparaenum}[I)]
+            \item Energía cinética. \quad \quad
+            \item Presión. \quad \quad
+            \item Potencia. \quad \quad
+            \item Energía potencial. \quad \quad
+    \end{inparaenum}
+
+    Selecciona la respuesta que relaciona los tres términos con las cantidades físicas correspondientes.
+    \begin{tasks}
+        \task a - II, b - I, c - IV
+        \task a - IV, b - I, c - II
+        \task a - IV, b - II, c - III
+        \task a - II, b - III, c - I
+    \end{tasks}
+    \question\textbf{(1 punto)} Bernoulli al estudiar la relación entre la presión y la velocidad de un líquido que circula por una tubería, encontró que la presión es \rule{2cm}{0.1mm} si su velocidad es \rule{2cm}{0.1mm}:
+    \begin{tasks}(4)
+        \task alta - cero.
+        \task baja - máxima.
+        \task baja - baja .
+        \task alta - baja.
+    \end{tasks}
+    \question\textbf{(1 punto)} El número de Reynolds es una cantidad adimensional que nos indica cuándo un flujo \rule{2cm}{0.1mm} pasa a ser un flujo \rule{2cm}{0.1mm}.
+    \begin{tasks}
+        \task laminar - seccionado
+        \task turbulento - laminar
+        \task laminar  - turbulento
+        \task estático - turbulento
+    \end{tasks}
+
+\end{questions}
+
+\newpage
+
+\vspace*{-1cm}
+
+\textbf{\huge{Formulario.}}
+\begin{table}[H]
+    \centering
+    \setlength{\tabcolsep}{40pt}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{c  c}
+        \multicolumn{2}{c}{Hidrodinámica} \\
+        $G = \dfrac{V}{t}$ & $G = A \, v$ \\
+        $\text{Flujo} = \dfrac{m}{t}$ & $\text{Flujo} = \dfrac{\rho \, V}{t}$ \\
+        $\text{Flujo} = G \, \rho$ & \\
+        $v_{1} \, A_{1} = v_{2} \, A_{2}$ & $v = \sqrt{2 \, g \, h}$ \\
+        \multicolumn{2}{c}{$P_{1} + \rho \, g \, h_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \rho \, g \, h_{2} + \dfrac{1}{2} \rho \, v_{2}^{2}$} \\ \hline
+        \multicolumn{2}{c}{Electricidad} \\
+        $V = I \, R$ & $R_{T} = R_{1} + R_{2} + R_{3} + \ldots$ \\
+        $\dfrac{1}{R_{T}} = \dfrac{1}{R_{1}} + \dfrac{1}{R_{2}} + \dfrac{1}{R_{3}} + \ldots$ & $\tau = R \, C$ \\
+        $X_{C} = \dfrac{1}{\omega \, C}$ & $X_{L} = \omega\, L$ \\
+        $Z = R + j \, X_{L}$ & $Z = R - j \, X_{C}$ \\
+        $\abs{Z} = \sqrt{R^{2} + (X_{L})^{2}}$ & $\abs{Z} = \sqrt{R^{2} + (X_{C})^{2}}$ \\
+\end{tabular}
+\end{table}
+
+\newpage
+
+En este espacio deberás de incluir el desarrollo completo de los Problemas de Ejecución. El problema se califica de la siguiente manera: \textbf{a) Datos: 0.25 puntos}, \textbf{b) Expresión(es): 0.25 puntos}, \textbf{c) Sustitución: 0.25 puntos} y \textbf{d) Manejo de unidades: 0.25 puntos}.
+
+\vspace*{0.5cm}
+Solución al Problema de Ejecución \ref{Problema_01}:
+
+\vspace*{4cm}
+\rule{0.9\textwidth}{0.3mm}
+
+Solución al Problema de Ejecución \ref{Problema_02}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.3mm}
+
+Solución al Problema de Ejecución \ref{Problema_03}:
+
+\end{document}

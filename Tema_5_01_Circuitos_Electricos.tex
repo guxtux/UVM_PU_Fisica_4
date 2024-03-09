@@ -76,7 +76,7 @@ Limita el flujo de corriente en el circuito.
 \\
 \bigskip
 \pause
-Se mide en ohms $(\Omega)$ y se representa con el símbolo $R$.
+Se mide en Ohms $(\Omega)$ y se representa con el símbolo $R$.
 \end{frame}
 \begin{frame}
 \frametitle{Capacitor}
@@ -683,4 +683,529 @@ $R_{6}$ & \SI{2.31}{\volt} & \SI{0.231}{\ampere} \\ \hline
 \end{tabular}
 \end{table}
 \end{frame}
+
+\section{Reactancias}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+
+\subsection{Reactancia capacitiva}
+
+\begin{frame}
+\frametitle{¿Qué es la reactancia capacitiva?}
+La \textocolor{darkblue}{reactancia capacitiva} es la oposición que presenta un capacitor al paso de la corriente.
+\end{frame}
+\begin{frame}
+\frametitle{Circuito $R \, C$}
+\vspace*{-1cm}
+Cuando tenemos un circuito $R \, C$
+\begin{center}
+\begin{circuitikz}[american voltages]
+        \draw
+        (0, 0) to[sI] ++(0, 3)
+        to[R, l=$R$] ++(4, 0)
+        to[C, l=$C$] ++(0, -3)
+        to[short] (0, 0);
+\end{circuitikz} 
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Voltaje en el capacitor}    
+En un capacitor para obtener la fórmula del voltaje, \pause se parte de la fórmula de la corriente que es
+\pause
+\begin{align*}
+I_{c \, \text{máx}} = V_{c \, \text{máx}} \cdot \omega \, C
+\end{align*}
+y se despeja para obtener la fórmula de voltaje:
+\end{frame}
+\begin{frame}
+\frametitle{La reactancia capacitiva}
+\begin{align*}
+V_{c \, \text{máx}} = I_{c \, \text{máx}} \left(  \dfrac{1}{\omega \, C} \right)
+\end{align*}
+\pause
+el término en el paréntesis se le conoce como \textocolor{lava}{reactancia capacitiva} $(X_{C})$.
+\end{frame}
+\begin{frame}
+\frametitle{La reactancia capacitiva}
+\vspace*{-1cm}
+Definimos la reactancia capacitiva como:
+\pause
+\begin{align*}
+X_{C} = \dfrac{1}{\omega \, C}
+\end{align*}
+Donde:
+\setbeamercolor{item projected}{bg=cyan,fg=crimson}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item $\omega$ es la frecuencia angular de la fuente de alimentación (se mide en \si{\radian\per\second})
+\item $C$ es la capacitancia (se mide en Faradios)
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{La reactancia capacitiva}
+La \textocolor{lava}{reactancia capacitiva} $(X_{C})$ se interpreta como la oposición que presenta el capacitor al paso de la corriente, \pause se mide en Ohms (\si{\ohm}).
+\end{frame}
+\begin{frame}
+\frametitle{Manejando la reactancia capacitiva}
+La \textocolor{lava}{reactancia capacitiva} $(X_{C})$ es diferente a la \textocolor{copper}{resistencia normal} $(R)$, \pause aunque ambas se miden en Ohms $\si{\ohm}$, no se puede sumar directamente por dos razones:
+\end{frame}
+\begin{frame}
+\frametitle{Manejando la reactancia capacitiva}
+\setbeamercolor{item projected}{bg=darklava,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Aunque provoca que exista una corriente en el circuito, produce un desfasamiento de \ang{90} entre voltaje y corriente.
+\item No consume energía.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Relación entre V - I}
+\vspace*{-1cm}
+La corriente \textocolor{bulgarianrose}{está en fase} con respecto al voltaje.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{Imagenes/Circuitos_IV_01.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Defasamiento entre V - I}
+\vspace*{-1cm}
+\textocolor{cobalt}{La corriente se adelanta} \ang{90} con respecto al voltaje.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{Imagenes/Circuitos_IV_02.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{La reactancia capacitiva}
+De esta manera, nos referimos a ella como una \textocolor{darkmagenta}{resistencia imaginaria}.
+\end{frame}
+\begin{frame}
+\frametitle{Circuito $R \, C$}
+\vspace*{-1cm}
+\begin{center}
+\begin{circuitikz}[american voltages]
+      \draw
+       (0, 0) to[sI] ++(0, 3)
+        to[R, l=$R$] ++(4, 0)
+        to[C, l=$C$] ++(0, -3)
+        to[short] (0, 0);
+\end{circuitikz} 
+\end{center}
+La \enquote{resistencia total} del circuito $R \, C$ se llama \textocolor{cardinal}{impedancia eléctrica} $(Z)$, que se mide en Ohms (\si{\ohm}).
+\end{frame}
+\begin{frame}
+\frametitle{Impedancia compleja en un circuito $R \, C$}
+La impedancia eléctrica $(Z)$ en el circuito $R \, C$ se representa como un número complejo:
+\pause
+\begin{align*}
+Z = R - j \, X_{C}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Impedancia compleja en un circuito $R \, C$}
+\vspace*{-1cm}
+\begin{align*}
+Z = R - j \, X_{C}
+\end{align*}
+Donde:
+\setbeamercolor{item projected}{bg=carolinablue,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item $R$ es la parte real.
+\item $X_{C}$ es la parte imaginaria.
+\item $j = \sqrt{-1}$
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{El signo en $Z$}
+El signo negativo de la parte imaginaria $(- j \, X_{C})$ se debe al defasamiento entre la corriente y el voltaje en el circuito $R \, C$.
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio}
+A un circuito serie RC con $R = \SI{20}{\ohm}$ y $C = \SI{5}{\micro\farad}$, se le aplica un voltaje $V = \num{150} \, \cos (\num{10000}) \, t $\, Volts.
+\\
+\bigskip
+\pause
+Calcula la impedancia compleja $Z = R + i \, X_{C}$.
+\end{frame}
+\begin{frame}
+\frametitle{Solución}
+\textocolor{red}{Datos:}
+\vspace*{-1cm}
+\begin{align*}
+R &= \SI{20}{\ohm} \\
+C &= \SI{5}{\micro\farad} \\
+\omega &= \num{10000} \, \text{rad/s} \\
+X_{C} &= \,?  \\
+Z &= \, ?
+\end{align*} 
+\end{frame}
+\begin{frame}
+\frametitle{Solución}
+\textocolor{red}{Expresiones:}
+\pause
+\begin{align*}
+X_{C} &= \dfrac{1}{\omega \, C} \\[0.5em]
+Z &= R + j \, X_{C}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Solución}
+\textocolor{red}{Sustitución:}
+\begin{eqnarray*}
+\begin{aligned}
+X_{C} &= \dfrac{1}{\omega \, C} = \dfrac{1}{(\num{10000} \, \text{rad/s})\left( \SI{5d-6}{\farad} \right)} \\ \pause
+X_{C} &= \SI{20}{\ohm}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Solución}
+Por lo que la impedancia compleja del circuito serie RC es:
+\pause
+\begin{align*}
+Z = 20 - j \, 20
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Magnitud de la impedancia}
+Ya sabemos cómo escribir la impedancia compleja de un circuito $RC$, \pause pero podemos obtener el valor de la misma, lo que nos permitiría \enquote{conectar} con otros elementos y obtener una resistencia total.
+\end{frame}
+\begin{frame}
+\frametitle{Magnitud de la Impedancia}
+La magnitud de la impedancia en un circuito $RC$, se obtiene de la siguiente manera:
+\pause
+\begin{align*}
+Z = \sqrt{R^{2} + \left( X_{C} \right)^{2}}
+\end{align*}
+El valor de $Z$ se reporta en Ohms $(\si{\ohm})$.
+\end{frame}
+
+\subsection{Reactancia inductiva}
+
+\begin{frame}
+\frametitle{Circuito $R \, L$}
+\vspace*{-1cm}
+Cuando tenemos un circuito $R \, L$
+\begin{center}
+\begin{circuitikz}[american voltages]
+        \draw
+        (0, 0) to[sI] ++(0, 3)
+        to[R, l=$R$] ++(4, 0)
+        to[L, l=$L$] ++(0, -3)
+        to[short] (0, 0);
+\end{circuitikz} 
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la reactancia inductiva?}
+La \textocolor{darkscarlet}{reactancia inductiva} es la oposición que presenta un inductor al paso de la corriente.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la reactancia inductiva?}
+Tampoco se puede llamar resistencia ya que el inductor también produce un desfasamiento de \ang{90} entre la corriente y el voltaje.
+\end{frame}
+\begin{frame}
+\frametitle{Defasamiento entre V - I}
+\vspace*{-1cm}
+\textocolor{byzantine}{La corriente se retrasa} \ang{90} con respecto al voltaje.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{Imagenes/Circuitos_IV_03.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Voltaje en el inductor}
+Si la ecuación del inductor
+\pause
+\begin{align*}
+V_{L \, \text{máx}} = I_{L \, \text{máx}} \cdot \omega \cdot L
+\end{align*}
+\pause 
+se analiza como a la Ley de Ohm en las resistencias $(V = I \, R)$,
+\end{frame}
+\begin{frame}
+\frametitle{Voltaje en el inductor}
+Quedaría de la siguiente manera para el inductor:
+\pause
+\begin{align*}
+V_{L \, \text{máx}} = I_{L \, \text{máx}} \cdot \left( \omega \cdot L \right)
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Reactancia inductiva}
+Al elemento entre paréntesis, se le conoce como \textocolor{darkviolet}{reactancia inductiva}:
+\pause
+\begin{align*}
+X_{L} = \omega \cdot L
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Reactancia inductiva}
+\vspace*{-1cm}
+\begin{align*}
+X_{L} = \omega \cdot L
+\end{align*}
+Donde:
+\setbeamercolor{item projected}{bg=darkslateblue,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item $\omega$ es la frecuencia angular de la fuente de alimentación (se mide en \si{\radian\per\second}).
+\item $L$ es la inductancia de la bobina/inductor (se mide en Henry [\si{\henry}]).
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Reactancia inductiva}
+La \textocolor{ao}{reactancia inductiva} $X_{L}$ es la oposición que presenta el inductor al paso de la corriente a través de él, se mide en Ohms $(\si{\ohm})$.
+\end{frame}
+\begin{frame}
+\frametitle{Manejando la reactancia inductiva}
+La \textocolor{ao}{reactancia inductiva} $(X_{L})$ tampoco se puede sumar con la \textocolor{bole}{resistencia} $(R)$, y se trabaja en forma matemática como una resistencia imaginaria.
+\end{frame}
+\begin{frame}
+\frametitle{Impedancia en un circuito $R \, L$}
+La \enquote{resistencia total} del circuito $R \, L$ se llama \textocolor{electricindigo}{impedancia eléctrica} $(Z)$, que se mide en Ohms (\si{\ohm}).
+\end{frame}
+\begin{frame}
+\frametitle{Impedancia en un circuito $R \, L$}
+La \textocolor{electricindigo}{impedancia compleja} $Z$ en un circuito $R \, L$ se representa como un número complejo:
+\pause
+\begin{align*}
+Z = R + j \, X_{L}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Impedancia compleja en un circuito $R \, L$}
+\vspace*{-1cm}
+\begin{align*}
+Z = R + j \, X_{L}
+\end{align*}
+Donde:
+\setbeamercolor{item projected}{bg=carolinablue,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item $R$ es la parte real.
+\item $X_{L}$ es la parte imaginaria.
+\item $j = \sqrt{-1}$
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{El signo en $Z$}
+El signo positivo de la parte imaginaria $(+ j \, X_{L})$ se debe al defasamiento entre la corriente y el voltaje en el circuito $R \, L$.
+\end{frame}
+\begin{frame}
+\frametitle{Magnitud de la Impedancia}
+La magnitud de la impedancia en un circuito $RL$, se obtiene de la siguiente manera:
+\pause
+\begin{align*}
+Z = \sqrt{R^{2} + \left( X_{L} \right)^{2}}
+\end{align*}
+El valor de $Z$ se reporta en Ohms $(\si{\ohm})$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Manejando las reactancias}
+En cambio, la reactancia inductiva y la reactancia capacitiva \textocolor{blue}{sí se pueden sumar entre sí}, \pause ya que ambas son interpretadas matemáticamente como resistencias negativas.
+\end{frame}
+\begin{frame}
+\frametitle{Manejando las reactancias}
+En el inductor el voltaje va adelantado \ang{90} a la corriente \pause y en el capacitor el voltaje va retrasado \ang{90} a la corriente.
+\end{frame}
+\begin{frame}
+\frametitle{Manejando las reactancias}
+Ambos elementos, al sumarse pueden cancelar sus efectos entre sí y es por eso que sus reactancias imaginarias tienen que ser de signos contrarios.
+\end{frame}
+
+\section{Impedancia en \texorpdfstring{$RLC$}{RLC}}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{La impedancia compleja}
+
+\begin{frame}
+\frametitle{Circuito RLC en serie}
+\vspace*{-1cm}
+Considera el siguiente circuito $RLC$:
+\pause
+\begin{center}
+    \begin{circuitikz}[american voltages]
+            \draw
+            (0, 0) to [sI] ++(0, 3)
+            to [R, l=$R$] ++(4, 0)
+            to [L, l=$L$] ++(0, -3)
+            to [C, l=$C$] ++(-3, 0)
+            to [short] (0, 0);
+    \end{circuitikz} 
+    \end{center}
+\end{frame}
+\begin{frame}
+\frametitle{La impedancia compleja}
+Obtener la impedancia compleja del circuito $RLC$ en serie, es mediante la siguiente expresión:
+\pause
+\begin{align*}
+Z = R + j \, \left( X_{L} - X_{C} \right)
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Magnitud de la impedancia}
+La magnitud de la impedancia del circuito $RLC$ en serie, se obtiene de manera similar que para la reactancia capacitiva y la reactancia inductiva:
+\end{frame}
+\begin{frame}
+\frametitle{Magnitud de la impedancia}
+Valor de la impedancia eléctrica del circuito $RLC$:
+\pause
+\begin{align*}
+Z = \sqrt{R^{2} + \left( X_{L} - X_{C} \right)^{2}}
+\end{align*}
+El valor de $Z$ se expresa en Ohms $(\si{\ohm})$.
+\end{frame}
+\begin{frame}
+\frametitle{Resumen}
+\begin{table}
+    \centering
+    \fontsize{12}{12}\selectfont
+    \begin{tabular}{c | c | c}
+        Elemento & $Z$ compleja & $Z$ Magnitud \\ \hline
+        $R \, C$ & $Z = R - j \, X_{C}$ & $Z = \sqrt{R^{2} + \left( X_{C} \right)^{2}}$ \\ \hline
+        $R \, L$ & $Z = R + j \, X_{L}$ & $Z = \sqrt{R^{2} + \left( X_{L} \right)^{2}}$ \\ \hline
+        $R \, L \, C$ & $Z = R + j \, (X_{L} - X_{C})$ & $Z = \sqrt{R^{2} + \left( X_{L} - X_{C}\right)^{2}}$ \\ \hline
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\section{Ejercicios}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Circuito RC}
+
+\begin{frame}
+\frametitle{Constante de tiempo}
+\vspace*{-1cm}
+En un circuito $RC$ en serie:
+\pause
+\begin{center}
+\begin{circuitikz}[american voltages]
+        \draw
+        (0, 0) to [battery, l=$\SI{40}{\volt}$] ++(0, 3)
+        to [R, l^= $\SI{8}{\kilo\ohm}$] ++(4, 0)
+        % to [short] ++(1, 0)
+        % to [L, l=$L$] ++(0, -3)
+        to [C, l=$\SI{4}{\micro\farad}$] ++(0, -3)
+        to [short] (0, 0);
+\end{circuitikz} 
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Constante de tiempo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item ¿Cuál es el valor de la constante de tiempo $\tau$?
+\item ¿Cuál es la expresión para el voltaje en el ciclo de carga del capacitor?
+\end{enumerate}    
+\end{frame}
+\begin{frame}
+\frametitle{Valor de la constante de tiempo}
+La constante de tiempo $\tau$ se obtiene:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\tau &= \pause R \, C = \pause (\SI{8}{\kilo\ohm})(\SI{4}{\micro\farad}) = \\[0.5em] \pause
+&= (\SI{8d3}{\ohm})(\SI{4d-6}{\farad}) = \pause \SI{0.032}{\milli\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Expresión para el ciclo de carga}
+El voltaje en el ciclo de carga del condensador es:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+V = V_{0} \, \left[ 1 - \exp \left(- \dfrac{t}{\tau} \right) \right] = \\[0.5em] \pause
+V = 40 \, \left[ 1 - \exp \left(- \dfrac{t}{\SI{0.032}\second} \right) \right]
+\end{aligned}
+\end{eqnarray*} 
+\end{frame}
+\begin{frame}
+\frametitle{Gráfica de voltaje capacitor}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{Imagenes/Carga_Capacitor_01.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Valor de voltaje}
+Se pregunta: ¿Cuánto tiempo transcurre para que en el capacitor haya un voltaje de \SI{20}{volt}?
+\end{frame}
+\begin{frame}
+\frametitle{Resistencias en serie}
+Considera el circuito de resistencias en serie:
+\pause 
+\begin{center}
+\begin{circuitikz}[american voltages]
+    \draw 
+        (0, 0) node [anchor=east] {$A^{\prime}$}
+        to[short, o-] (1, 0)
+        % (0, 0) to[V=10V] (0, 4)
+        to [R, l=\mbox{$R$}] (3, 0)
+        to [R, l=\mbox{$R$}] (5, 0)
+        to [R, l=\mbox{$R$}] (7, 0)
+        to [R, l=\mbox{$R$}] (9, 0)
+        % -- (8.5, 0) node[midway,fill=white,inner sep=5,scale=1.2] {$.\,.\,.$} (10.5, 0)
+        % ;
+        % \draw (8.5, 0) to [R, l=\mbox{$R$}] (10.5, 0)
+            to[short, -o] (10, 0)
+            node [anchor=west] {$B^{\prime}$};
+\end{circuitikz}  
+\end{center}
+\pause
+¿Cuál es el valor de la resistencia total $R_{T}$?
+\end{frame}
+\begin{frame}
+\frametitle{Resistencias en paralelo}
+\vspace*{-1cm}
+Considera el circuito de resistencias en paralelo:
+\pause
+\begin{center}
+\begin{circuitikz}[american voltages]
+\draw 
+    (0, 0) node [anchor=east] {$A^{\prime}$}
+    to[short, o-] (2, 0)
+    % (0, 0) to[V=10V] (0, 4)
+    to [R, l=\mbox{$R$}] (2, -2)
+    to [short, -o] (0, -2)
+    (-0.75, -2) node [anchor=west]{$B^{\prime}$};
+\draw (2, 0) to [short] (4, 0)
+    to [R, l=\mbox{$R$}] (4, -2)
+    to [short] (2, -2);
+\draw (4, 0) to [short] (6, 0)
+to [R, l=\mbox{$R$}] (6, -2)
+to [short] (4, -2);
+\draw (6, 0) to [short] (8, 0)
+to [R, l=\mbox{$R$}] (8, -2)
+to [short] (6, -2);
+% \draw (6, 0) -- (8, 0) node[midway,fill=white,inner sep=5,scale=1.2] {$.\,.\,.$};
+% \draw (6, -2) -- (8, -2) node[midway,fill=white,inner sep=5,scale=1.2] {$.\,.\,.$};
+\end{circuitikz}  
+\end{center}
+\pause
+\pause
+¿Cuál es el valor de la resistencia total $R_{T}$?
+\end{frame}
+
 \end{document}

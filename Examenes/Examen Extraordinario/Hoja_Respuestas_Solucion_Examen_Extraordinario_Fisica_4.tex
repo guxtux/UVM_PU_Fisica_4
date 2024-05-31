@@ -1,0 +1,49 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{physics}
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\ExplSyntaxOn
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{enumitem}
+\usepackage{paralist}
+\usepackage{circuitikz}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+
+\begin{document}
+
+\includepdf[pages=-]{Hoja_Respuestas_Examen_Extraordinario_Fisica_4.pdf}
+\setcounter{page}{3}
+\newpage
+
+\includepdf[pages=-]{Examen_Extraordinario_Fisica_4_Solucion_Ejercicios.pdf}
+
+\end{document}

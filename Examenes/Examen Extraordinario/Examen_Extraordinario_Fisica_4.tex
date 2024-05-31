@@ -1,0 +1,826 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{physics}
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\ExplSyntaxOn
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{enumitem}
+\usepackage{paralist}
+\usepackage{circuitikz}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+
+\begin{document}
+
+\includepdf[pages=-]{Caratula_Examen_Extraordinario_Fisica_4.pdf}
+\setcounter{page}{3}
+
+\newpage
+\begin{center}
+\textbf{Cada ejercicio vale 1 punto, incluidos los de ejecución.}
+\end{center}
+
+\begin{questions}
+
+    \section{(4 puntos) Ondas.}
+    
+    \vbox{\leftskip\leftmargin A continuación se te presenta una figura que representa una onda mecánica que representa una fuerza que se expresa en Newtons (\unit{\newton}) contra distancia (en metros), responde las preguntas (\ref{pregunta_01}.) a (\ref{pregunta_03}.) obteniendo la información a partir de lo que se presenta en la figura.}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.8]{Imagenes/Ejercicio_Ondas_01.png}
+    \end{figure}
+
+    \question \label{pregunta_01} La amplitud de la onda es \rule{2cm}{0.1mm}. 
+    \begin{tasks}(4)
+        \task \SI{0.25}{\newton}
+        \task \SI{0.5}{\newton}
+        \task \SI{1.0}{\newton}
+        \task \SI{1.5}{\newton}
+    \end{tasks}
+    \question \label{pregunta_02} Lo longitud de onda es \rule{2cm}{0.1mm} 
+    \begin{tasks}(4)
+        \task $\pi$ \, \unit{\meter}
+        \task $\dfrac{\pi}{2}$ \, \unit{\meter}
+        \task $2 \pi$ \, \unit{\meter}
+        \task $\dfrac{3}{2} \pi$ \, \unit{\meter}
+    \end{tasks}
+    \question \label{pregunta_03} Cuando la onda llega a la posición de $6 \pi$, ha transcurrido 1 segundo, ¿cuál es la frecuencia de la onda que se presenta en la gráfica?
+    \begin{tasks}(4)
+        \task \SI{1}{\hertz}
+        \task \SI{2}{\hertz}
+        \task \SI{3}{\hertz}
+        \task \SI{3.5}{\hertz}
+    \end{tasks}
+    \question \label{Ejercicio_01} \textbf{Ejercicio de ejecución.} En una cuerda tensa se producen ondas con una frecuencia de \SI{450}{\hertz}, a una velocidad de propagación cuya magnitud es de \SI{250}{\meter\per\second}. ¿Qué longitud de onda tienen?
+    \begin{tasks}(4)
+        \task \SI{0.25}{\meter}
+        \task \SI{0.55}{\meter}
+        \task \SI{1.20}{\meter}
+        \task \SI{1.62}{\meter}
+   \end{tasks}
+    % \question Cuando se habla de que es el recorrido de la onda desde un punto hasta el siguiente punto equivalente, se está hablando de: \rule{1.5cm}{0.1mm}
+    % \begin{tasks}(4)
+    %     \task Elongación.
+    %     \task Cresta.
+    %     \task Ciclo.
+    %     \task Valle.
+    % \end{tasks}
+    % \question Se definen las ondas longitudinales a aquellas que se generan cuando las partículas del medio material vibra de manera \rule{2cm}{0.1mm} a la dirección de propagación de la onda.
+    % \begin{tasks}(4)
+    %     \task Uniforme
+    %     \task Perpendicular
+    %     \task Reflejante
+    %     \task Paralela
+    % \end{tasks}
+
+    \section{(3 puntos) Fenómenos sonoros.}
+
+    \question Por medio de \rule{2cm}{0.1mm} se señala la dirección en que avanza cualquiera de los puntos de un frente de onda.
+    \begin{tasks}(4)
+        \task La fase
+        \task El rayo
+        \task El tren
+        \task La amplitud
+    \end{tasks}
+%    La \rule{2cm}{0.1mm} de las ondas se presenta cuando éstas encuentran un obstáculo que les impide propagarse.
+%     \begin{tasks}(4)
+%         \task Reflexión
+%         \task Refracción
+%         \task Compresión
+%         \task Rarefacción
+%     \end{tasks}
+    \question Las ondas \rule{2cm}{0.1mm} se presenta cuando las partículas del medio material vibran perpendicularmente a la dirección de propagación de la onda.
+    \begin{tasks}(4)
+        \task Transversales
+        \task Longitudinales
+        \task Comprimidas
+        \task Estacionarias
+    \end{tasks}
+    \question Las ondas estacionarias se producen cuando interfieren dos movimientos ondulatorios de la misma \rule{2cm}{0.1mm} y \rule{2cm}{0.1mm} que se propagan en diferente sentido a lo
+    largo de una línea.
+    \begin{multicols}{2}
+        \begin{tasks}
+            \task frecuencia - fase
+            \task amplitud - longitud de onda
+            \task frecuencia - amplitud
+            \task amplitud - periodo
+        \end{tasks}
+    \end{multicols}
+%     \question Es el nombre que se le da al desplazamiento que experimenta una partícula vibrante, equivalente a la suma vectorial de los desplazamientos que cada onda le produce.
+%     \begin{tasks}(4)
+%         \task Compresión
+%         \task Rarefacción
+%         \task Superposición.
+%         \task Expansión.
+%     \end{tasks}
+
+    \section{(3 puntos) Oído.}
+
+    \question Cuando la frecuencia de una onda sonora es inferior al límite audible del ser humano, se dice que es \rule{2cm}{0.1mm}
+    \begin{tasks}(4)
+        \task Ultrasónica
+        \task Hipersónica
+        \task Ecosónica
+        \task Infrasónica
+    \end{tasks}
+    
+%     % \question \textbf{Ejercicio de ejecución.} Determinar cuál es el periodo de las ondas producidas en una cuerda de violín si la velocidad de propagación tiene una magnitud de \SI{220}{\meter\per\second} y su longitud de onda es de $\lambda = \SI{0.2}{\meter}$.
+%     % \begin{tasks}(4)
+%     %    \task \SI{9.09d-2}{\second}
+%     %    \task \SI{9.09d-3}{\second}
+%     %    \task \SI{9.09d-4}{\second}
+%     %    \task \SI{9.09d-5}{\second}
+%     % \end{tasks}
+    \question \label{Ejercicio_02} \textbf{Ejercicio de ejecución.} Una fuente sonora produce un sonido con una frecuencia de \SI{750}{\hertz}, calcula su longitud de onda en el agua, considera que la magnitud de la velocidad del sonido en el agua es de \SI{1435}{\meter\per\second}.
+    \begin{tasks}(4)
+        \task \SI{1.913}{\meter}
+        \task \SI{2.856}{\meter}
+        \task \SI{3.102}{\meter}
+        \task \SI{8.139}{\meter}
+   \end{tasks}
+   \question \label{Ejercicio_03} \textbf{Ejercicio de ejecución.} ¿Cuál es la intensidad de un sonido de \SI{68.55}{\dB}?
+   \begin{tasks}(4)
+    \task $\displaystyle \SI[per-mode=fraction]{7.079d-4}{\watt\per\square\meter}$
+    \task $\displaystyle \SI[per-mode=fraction]{7.079d-5}{\watt\per\square\meter}$
+    \task $\displaystyle \SI[per-mode=fraction]{7.079d-6}{\watt\per\square\meter}$
+    \task $\displaystyle \SI[per-mode=fraction]{7.079d-9}{\watt\per\square\meter}$
+   \end{tasks}
+%    \question \label{Ejercicio_03} \textbf{Ejercicio de ejecución.} La conversación ordinaria corresponde a un nivel de sonido de aproximadamente \SI{65}{\dB}. Si dos personas hablan al mismo tiempo, el nivel de sonido es:
+%    \begin{tasks}(4)
+%        \task \SI{65}{\dB}
+%        \task \SI{68}{\dB}
+%        \task \SI{75}{\dB}
+%        \task \SI{130}{\dB}
+%    \end{tasks}
+
+   \section{(2 puntos) Efecto Doppler.}
+
+   \question \label{Ejercicio_04} \textbf{Ejercicio de ejecución: } Una ambulancia lleva una velocidad cuya magnitud es de \SI{70}{\kilo\meter\per\hour} y su sirena suena con una frecuencia de \SI{830}{\hertz}. ¿Qué frecuencia aparente escucha un observador que está parado, cuando la ambulancia se aleja de él? Considera que la velocidad del sonido en el aire es de \SI{340}{\meter\per\second}.
+   \begin{tasks}(4)
+    \task \SI{785.11}{\hertz}
+    \task \SI{880.33}{\hertz}
+    \task \SI{1000.00}{\hertz}
+    \task \SI{1659.19}{\hertz}
+    \end{tasks}
+    \question \label{Ejercicio_05} \textbf{Ejercicio de ejecución: } Un automovilista que viaja a una velocidad cuya magnitud es de \SI{80}{\kilo\meter\per\hour} escucha el silbato de una fábrica cuya frecuencia es de \SI{1100}{\hertz}. Calcula la frecuencia aparente escuchada por el automovilista cuando se acerca a la fuente. Considera que la velocidad del sonido en el aire es de \SI{340}{\meter\per\second}
+    \begin{tasks}(4)
+        \task \SI{899.20}{\hertz}
+        \task \SI{1171.88}{\hertz}
+        \task \SI{1905.07}{\hertz}
+        \task \SI{2416.23}{\hertz}
+    \end{tasks}
+
+    \section{(1 punto) Óptica geométrica.}
+
+    \question Es una de las leyes de reflexión:
+    \begin{tasks}
+        \task El rayo incidente es perpendicular al rayo reflejado.
+        \task El rayo incidente es paralelo a la normal.
+        \task El rayo incidente, la normal y el rayo reflejado están en el mismo plano.
+        \task El rayo incidente y el rayo reflejado están en un plano, mientras que la normal está en otro plano.
+    \end{tasks}
+%     \question ¿Cuáles son las características de la luz que se cumplen tanto en la teoría corpuscular de la luz y la teoría ondulatoria?
+%     {\renewcommand{\thepartno}{\Alph{partno}}
+%     \begin{parts}
+%         \part Refracción, Reverberación, Reflexión.
+%         \part Reflexión, Resonancia, Propagación rectilínea.
+%         \part Propagación rectilínea, Reflexión, Refracción.
+%         \part Refracción, Efecto Doppler, Reflexión.
+%     \end{parts}
+%     }
+
+    % \newpage
+
+    \section{(3 puntos) Refracción.}
+
+    \question La refracción de la luz consiste en la desviación que sufren los rayos luminosos cuando llegan a la superficie de separación entre dos sustancias o medios de diferente \rule{2.5cm}{0.1mm}.
+    \begin{tasks}(4)
+        \task Peso.
+        \task Volumen.
+        \task Densidad.
+        \task Grosor.
+    \end{tasks}
+    \question De la ley de Snell se nos pide obtener el ángulo $a$ (incidente), ¿Cuál es la expresión que nos resuelve el problema?
+    \begin{multicols}{2}
+    \begin{tasks}
+        \task $ a = \sen^{-1} \left(\dfrac{n_{b} \, \text{sen} \, b}{n_{a}} \right)$
+        \task $ a = \sen^{-1} \left(\dfrac{n_{a} \, \text{sen} \, b}{n_{b}} \right)$
+        \task $ a = \sen^{-1} \left(\dfrac{n_{a} \, n_{b}}{\text{sen} \, b} \right)$
+        \task $ a = \sen^{-1} \left(\dfrac{\text{sen} \, b}{n_{a} \, n_{b}} \right)$
+    \end{tasks}
+    \end{multicols}
+    \question \label{Ejercicio_06} \textbf{Ejercicio de ejecución:} Un rayo de luz, de \SI{589}{\nano\meter} de longitud de onda, que viaja a través de aire $(n_{a} = 1.0)$, incide sobre una lámina plana y uniforme de vidrio sin plomo $(n_{b} = 1.52)$ con un ángulo de \ang{30} con la normal. ¿Cuál es el ángulo de refracción?
+    \begin{tasks}(4)
+        \task \ang{17.19}
+        \task \ang{19.20}
+        \task \ang{38.25}
+        \task \ang{48.07}
+    \end{tasks}
+%   El haz de una linterna incide sobre la superficie de un panel de vidrio $(n_{v} = 1.56)$ en un ángulo de \ang{75} con la normal. ¿Cuál es el ángulo de refracción? El índice de refracción del aire es $n_{a} = 1.0$
+%     \begin{tasks}(4)
+%         \task \ang{27.19}
+%         \task \ang{39.83}
+%         \task \ang{38.25}
+%         \task \ang{48.07}
+%     \end{tasks}
+
+    \section{(3 puntos) Lentes delgadas.}
+
+%     \question Las lentes \rule{2.5cm}{0.1mm} son aquellas cuyo espesor disminuye de los bordes hacia el centro, hablamos de las lentes:
+%     \begin{tasks}(4)
+%         \task Esféricas.
+%         \task Divergentes.
+%         \task Convergentes.
+%         \task Cilíndricas.
+%     \end{tasks}
+%     \question Revisa con cuidado la siguiente imagen e identifica las siguientes lentes en el orden que se presenta, ya sean positivas (+) o negativas (-).
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale=2]{Imagenes/Arreglo_Lentes_02.png}
+%     \end{figure}
+%     \begin{tasks}(4)
+%         \task \textbf{+, - , +, -}
+%         \task \textbf{-, - , +, +} 
+%         \task \textbf{+, + , -, -} 
+%         \task \textbf{-, + , -, +} 
+%     \end{tasks}
+
+    \question \label{Ejercicio_07} \textbf{Ejercicio de ejecución.} Un objeto de \SI{15}{\centi\meter} se coloca a \SI{50}{\centi\meter} de una lente positiva que tiene una distancia focal de \SI{20}{\centi\meter}. ¿De qué tamaño es la imagen?
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \textbf{+}\SI{19.85}{\centi\meter}
+        \task \textbf{+}\SI{25.20}{\centi\meter}
+        \task \SI{-5.04}{\centi\meter}
+        \task \SI{-9.99}{\centi\meter}
+    \end{tasks}
+    \question \label{Ejercicio_08} \textbf{Ejercicio de ejecución.} Una lente divergente tiene una longitud focal de \SI{10.0}{\centi\meter}, se coloca un objeto de \SI{5}{\centi\meter} de altura a \SI{30.0}{\centi\meter} de la lente. ¿Cuál es el tamaño de la imagen?
+    \begin{tasks}(4)
+        \task \textbf{+}\SI{5.20}{\centi\meter}
+        \task \SI{-5.20}{\centi\meter}
+        \task \SI{-1.5}{\centi\meter}
+        \task \textbf{+}\SI{1.5}{\centi\meter}
+    \end{tasks}
+    \question De la convención de signos para las lentes delgadas: La distancia de la imagen $d_{i}$ es \rule{2cm}{0.1mm} para una imagen virtual.
+    \begin{tasks}(4)
+        \task Negativa
+        \task Positiva
+        \task Infinita
+        \task Cero
+    \end{tasks}
+
+%       ¿Cuál es la potencia de una lente con \SI{15}{\centi\meter} de distancia focal?
+%     \begin{tasks}(4)
+%         \task \num{-2.98} Dioptrías
+%         \task \num{2.98} Dioptrías
+%         \task \num{6.66} Dioptrías
+%         \task \num{-5.25} Dioptrías
+%     \end{tasks}
+
+    \section{(3 puntos) Defectos de la visión.}
+    
+    \question El siguiente esquema representa un ojo humano, ¿cómo se denomina al caso en términos de anomalías/normalidad de la visión?
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{Imagenes/Defectos_Vision_05.png}
+    \end{figure}
+    \begin{tasks}(4)
+        \task Ojo astigmata.
+        \task Ojo emétrope.
+        \task Ojo hipermétrope.
+        \task Ojo miope.
+    \end{tasks}
+    \question La siguiente definición: \enquote{Es la porción del espacio en la cual los objetos pueden ser percibidos simultáneamente al mirar un objeto fijo e inmóvil}, corresponde a: \rule{2cm}{0.1mm}
+    \begin{tasks}(4)
+        \task Visión binocular
+        \task Visión periférica
+        \task Campo visual
+        \task Escotoma
+    \end{tasks}
+    \question El siguiente esquema representa en términos de anomalías/normalidad de la visión?
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.35]{Imagenes/Defectos_Vision_03.png}
+    \end{figure}
+    \begin{tasks}(4)
+        \task Ojo hipermétrope.
+        \task Ojo astigmata.
+        \task Ojo emétrope.
+        \task Ojo miope.
+    \end{tasks}
+%     \question  La \rule{2cm}{0.1mm} es la capacidad de utilizar ambos ojos de manera coordinada y simultánea para percibir una sola imagen tridimensional del entorno.
+%     \begin{tasks}(4)
+%         \task Visión periférica.
+%         \task Visión 20/20.
+%         \task Visión monocular.
+%         \task Visión binocular.
+%     \end{tasks}
+
+    \section{(1 puntos) Ecuación de continuidad.}
+
+    \question En la hidrodinámica un fluido se considera ideal cuando: \rule{2cm}{0.1mm}
+    \begin{tasks}
+        \task La densidad del fluido es constante.
+        \task Las fuerzas son no conservativas.
+        \task El fluido es rotacional.
+        \task El fluido es viscoso.
+    \end{tasks}
+
+    \newpage
+
+    \section{(2 puntos) Ecuación de Bernoulli.}
+
+    \question \label{Ejercicio_09} \textbf{Ejercicio de ejecución:} Una tubería horizontal de \SI{0.02}{\square\meter} de área en la sección más ancha (Sección 1), tiene un estrechamiento con un área de \SI{0.01}{\square\meter} (Sección 2). La velocidad en la Sección 1 es de \SI{4}{\meter\per\second} a una presión de \SI{4d5 }{\pascal}. ¿Cuál es la presión en la Sección 2?
+    \begin{tasks}(4)
+        \task \SI{6.37e5}{\pascal}
+        \task \SI{5.52e5}{\pascal}
+        \task \SI{4.95e5}{\pascal}
+        \task \SI{3.76e5}{\pascal}
+    \end{tasks}
+
+%     \question \label{Ejercicio_09} \label{Problema_01} \textbf{Ejercicio de ejecución: } En el cuerpo humano el flujo sanguíneo es de $5$ litros de sangre por minuto. ¿Cuál es el área de la sección transversal de la aorta, si la sangre en ese vaso tiene una velocidad de \SI{28}{\centi\meter\per\second}? Recuerda que 1 litro = \SI{1000}{\cubic\centi\meter}.
+%     \begin{tasks}(4)
+%         \task \SI{2.77}{\square\centi\meter}
+%         \task \SI{2.97}{\square\centi\meter}
+%         \task \SI{3.10}{\square\centi\meter}
+%         \task \SI{1.77}{\square\centi\meter}
+%     \end{tasks}
+% %     \question Bernoulli al estudiar la relación entre la presión y la velocidad de un líquido que circula por una tubería, encontró que la presión es \rule{2cm}{0.1mm} si su velocidad es \rule{2cm}{0.1mm}:
+% %     \begin{tasks}(4)
+% %         \task alta - cero.
+% %         \task baja - máxima.
+% %         \task baja - alta.
+% %         \task alta - alta.
+% %     \end{tasks}
+    \question A continuación se presenta la ecuación de Bernoulli, debajo de ella se marcan tres términos con una letra:
+    \begin{align*}
+    \underbrace{P_{1}}_{\text{\large{a}}} + \underbrace{\rho \, g \, h_{1}}_{\text{\large{b}}} + \underbrace{\dfrac{1}{2} \rho \, v_{1}^{2}}_{\text{\large{c}}} = P_{2} + \rho \, g \, h_{2} + \dfrac{1}{2} \rho \, v_{2}^{2}
+    \end{align*}
+        
+    \vspace{0.5em}
+    En número romano se indica una cantidad física:
+    
+    \begin{inparaenum}[I)]
+            \item Energía cinética. \quad \quad
+            \item Energía potencial. \quad \quad
+            \item Fuerza. \quad \quad
+            \item Presión.
+    \end{inparaenum}
+
+    Relaciona los tres términos de la ecuación de Bernoulli (letras) con las cantidades físicas correspondientes (número romano).
+    \begin{tasks}
+        \task a - III, b - I, c - II
+        \task a - IV, b - I, c - II
+        \task a - IV, b - II, c - I
+        \task a - III, b - II, c - I
+    \end{tasks}
+%     \question En la siguiente figura se presenta el flujo \rule{2cm}{0.1mm} en un conducto.
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale=0.8]{Imagenes/Flujo_02_Laminar.png}
+%     \end{figure}
+%     \begin{tasks}(4)
+%         \task laminar
+%         \task turbulento
+%         \task seccionado
+%         \task estático
+%     \end{tasks}
+% %     \question \textbf{(1 punto)} El número de Reynolds es una cantidad adimensional que nos indica cuándo un flujo \rule{2cm}{0.1mm} pasa a ser un flujo \rule{2cm}{0.1mm}.
+% %     \begin{tasks}
+% %         \task laminar - seccionado
+% %         \task estático - turbulento
+% %         \task laminar  - turbulento
+% %         \task turbulento - laminar
+% %     \end{tasks}
+    
+    \section{(2 puntos) Corriente directa y alterna.}
+
+%     \question El flujo de las partículas cargadas en un conductor es lo que se conoce como \rule{2cm}{0.1mm}.
+%     \begin{tasks}(4)
+%         \task Resistencia.
+%         \task Voltaje.
+%         \task Potencia.
+%         \task Corriente.
+%     \end{tasks}
+%     \question Relaciona las siguientes cantidades con las respectivas unidades, una columna con la otra.
+    
+%     \begin{minipage}[t]{0.4\linewidth}
+%         \begin{enumerate}[label=\arabic*)]
+%             \item Voltaje.
+%             \item Resistencia.
+%             \item Corriente.
+%         \end{enumerate}
+%     \end{minipage}
+%     \begin{minipage}[t]{0.4\linewidth}
+%         \begin{enumerate}[label=\alph*)]
+%             \item Ohm (\unit{\ohm})
+%             \item Watt (\unit{\watt})
+%             \item Ampere (\unit{\ampere})
+%             \item Volt (\unit{\volt})
+%         \end{enumerate}
+%     \end{minipage}
+%     \begin{tasks}(4)
+%         \task 1-d, 2-b, 3-a
+%         \task 1-a, 2-d, 3-c
+%         \task 1-d, 2-a, 3-c
+%         \task 1-a, 2-c, 3-b
+%     \end{tasks}
+
+%     \section{(2 puntos) Ley de Ohm.}
+
+    \question \label{Ejercicio_10} \textbf{Ejercicio de ejecución:} Determina la intensidad de la corriente eléctrica a través de una resistencia de \SI{150}{\ohm} al aplicarle una diferencia de potencial de \SI{440}{\volt}.
+    \begin{tasks}(4)
+        \task \SI{2.93}{\ampere}
+        \task \SI{6.16}{\ampere}
+        \task \SI{12.40}{\ampere}
+        \task \SI{20.61}{\ampere}
+    \end{tasks}
+    \question \label{Ejercicio_11} \textbf{Ejercicio de ejecución: } Calcula la diferencia de potencial aplicada a una resistencia de \SI{250}{\ohm} y por ella fluyen \SI{5}{\milli\ampere}.
+    \begin{tasks}(4)
+        \task \SI{3.00}{\volt}
+        \task \SI{2.20}{\volt}
+        \task \SI{1.25}{\volt}
+        \task \SI{2.40}{\volt}
+    \end{tasks}
+
+    \newpage
+
+    \section{(2 puntos) Circuitos eléctricos.}
+
+%     \question En el siguiente circuito eléctrico se tienen $n$ resistencias del mismo valor conectadas en serie, ¿cuál es el valor de la resistencia total $(R_{T})$ del circuito entre los puntos $A^{\prime}$ y $B^{\prime}$?
+%     \begin{center}
+%     \begin{circuitikz}[american voltages]
+%         \draw 
+%             (0, 0) node [anchor=east] {$A^{\prime}$}
+%             to[short, o-] (1, 0)
+%             % (0, 0) to[V=10V] (0, 4)
+%             to [R, l=\mbox{$R$}] (3, 0)
+%             to [R, l=\mbox{$R$}] (5, 0)
+%             to [R, l=\mbox{$R$}] (7, 0)
+%             -- (8.5, 0) node[midway,fill=white,inner sep=5,scale=1.2] {$.\,.\,.$} (10.5, 0)
+%             ;
+%             \draw (8.5, 0) to [R, l=\mbox{$R$}] (10.5, 0)
+%                 to[short, -o] (12, 0)
+%                 node [anchor=west] {$B^{\prime}$};
+%     \end{circuitikz}  
+%     \end{center}
+%     \begin{tasks}(4)
+%         \task $R_{T} = n^{2} \, R$
+%         \task $R_{T} = n + R$
+%         \task $R_{T} = n \, R$
+%         \task $R_{T} = \dfrac{R}{n}$
+%     \end{tasks}
+%     \question En un circuito $RC$ en serie, se tiene que $R = \SI{5}{\kilo\ohm}$ y $C = \SI{3}{\micro\farad}$. ¿Cuál es la constante de tiempo del circuito?
+%     \begin{tasks}(4)
+%         \task \SI{1.5d-3}{\second}
+%         \task \SI{0.015}{\second}
+%         \task \SI{15}{\second}
+%         \task \SI{0.35}{\second}
+%     \end{tasks}
+% %     \question \textbf{(1 punto)} En un circuito \rule{2cm}{0.1mm} la corriente se adelanta \ang{90} con respecto al voltaje:
+% %     \begin{tasks}(4)
+% %         \task $R \, C$
+% %         \task $R \, L$
+% %         \task $R \, L \, C$
+% %         \task $R$
+% %     \end{tasks}
+    \question \label{Ejercicio_12} \textbf{Ejercicio de ejecución:} Calcula la reactancia inductiva del siguiente inductor:
+    \begin{center}
+        \begin{circuitikz}[american voltages]
+            \draw 
+                (0, 0) to[short, o-] (1, 0)
+                to [L, l=\mbox{$L=\SI{1.2}{\henry}$}] (3, 0)
+                to[short, -o] (4, 0);
+            \node at (2, -0.75) {$\omega = \SI{377}{\radian\per\second}$};
+        \end{circuitikz}  
+    \end{center}
+    \begin{tasks}(4)
+        \task \SI{246.1}{\ohm}
+        \task \SI{370.7}{\ohm}
+        \task \SI{452.4}{\ohm}
+        \task \SI{500.9}{\ohm}
+    \end{tasks}
+    \question \label{Ejercicio_13} \textbf{Ejercicio de ejecución:} Calcula la reactancia capacitiva del siguiente condensador:
+    \begin{center}
+        \begin{circuitikz}[american voltages]
+            \draw 
+                (0, 0) to[short, o-] (1, 0)
+                to [C, l=\mbox{$C=\SI{5}{\micro\farad}$}] (3, 0)
+                to[short, -o] (4, 0);
+            \node at (2, -0.75) {$\omega = \SI{159}{\radian\per\second}$};
+        \end{circuitikz}  
+    \end{center}
+    \begin{tasks}(4)
+        \task \SI{-1257.86}{\ohm}
+        \task \SI{-1761.00}{\ohm}
+        \task \SI{-2138.36}{\ohm}
+        \task \SI{-2515.72}{\ohm}
+    \end{tasks}
+
+    \section{(1 punto) Impedancia eléctrica.}
+
+    % \question En un circuito en serie una resistencia $R = \SI{8}{\ohm}$ y un inductor $L = \SI{0.02}{\henry}$ están conectados a una fuente de voltaje $v = \num{283} \, \text{sen} (300 \, t)$ Volts. ¿Cuál es el valor de la impedancia compleja?
+    % \begin{tasks}(4)
+    %     \task $Z {=} \SI{16}{\ohm} + j \, \SI{16}{\ohm}$
+    %     \task $Z {=} \SI{16}{\ohm} - j \, \SI{16}{\ohm}$
+    %     \task $Z {=} \SI{8}{\ohm} - j \, \SI{6}{\ohm}$
+    %     \task $Z {=} \SI{8}{\ohm} + j \, \SI{6}{\ohm}$
+    % \end{tasks}
+    \question \label{Ejercicio_14} \textbf{Ejercicio de ejecución: } Una resistencia $R = \SI{27.5}{\ohm}$ y un capacitor $C = \SI{66.7}{\micro\farad}$ se conectan en serie. La diferencia de potencial es $V = \num{50} \, \cos (1500 \, t)$ \, Volts. ¿Cuál es la magnitud de la impedancia eléctrica $Z$?
+    \begin{tasks}(4)
+        \task \SI{14.99}{\ohm}
+        \task \SI{98.95}{\ohm}
+        \task \SI{29.26}{\ohm}
+        \task \SI{24.70}{\ohm}
+    \end{tasks}
+
+    \section{(5 puntos) Instrumentación biomédica.}
+
+    \question Es el tipo de radiación ionizante que se utiliza en equipos de tomografía axial computarizada: \rule{2cm}{0.1mm}
+    \begin{multicols}{2}
+    \begin{tasks}
+        \task Rayos Ultravioleta.
+        \task Rayos Infrarrojos.
+        \task Rayos X.
+        \task Rayos Gamma.
+    \end{tasks}
+    \end{multicols}
+    \question El estetoscopio mercurial es un tipo de instrumento de diagnóstico que se clasifica en el grupo de estetoscopios: \rule{2cm}{0.1mm}
+    \begin{tasks}(4)
+        \task Automático.
+        \task Mecánico.
+        \task Electrónico.
+        \task Estándar.
+    \end{tasks}
+    \question En un electroencefalograma (EEG), son las ondas que indican un estado de alerta, consciencia y concentración: \rule{2cm}{0.1mm}
+    \begin{tasks}(4)
+        \task Alfa $(\alpha)$.
+        \task Delta $(\delta)$.
+        \task Gamma $(\gamma)$.
+        \task Beta $(\beta)$.
+    \end{tasks}
+    \question La longitud de onda $(\lambda)$ de los rayos X, es \rule{2cm}{0.1mm} en comparación con la longitud de onda de la región visible.
+    \begin{tasks}(4)
+        \task Mayor
+        \task Menor
+        \task El doble
+        \task La mitad
+    \end{tasks}
+    \question Apellido del científico que desarrolló las bases del electrocardiograma (EKG):
+    \begin{tasks}(4)
+        \task Lippmnann
+        \task Galvani
+        \task Einthoven
+        \task Berger
+    \end{tasks}
+%     \question Con el esfigmomanómetro se registran dos valores de presión arterial, el primero y más alto corresponde a la presión: \rule{2cm}{0.1mm}
+%     \begin{tasks}(4)
+%         \task Intraarticular.
+%         \task Sistólica.
+%         \task Diastólica.
+%         \task Abdominal.
+%     \end{tasks}
+%     \question El inicio de los ruidos de Korotkoff se presenta cuando la presión \rule{2cm}{0.1mm} es \rule{2cm}{0.1mm} que la presión del brazalete del esfigmomanómetro.
+%     \begin{multicols}{2}
+%     \begin{tasks}
+%         \task Sistólica - Mayor
+%         \task Diastólica - Mayor
+%         \task Diastólica - Menor
+%         \task Sistólica - Menor
+%     \end{tasks}
+%     \end{multicols}
+%     \end{multicols}
+%     \question Con un equipo de ultrasonido se envían ondas sonoras al cuerpo, el fenómeno que se presenta entre las ondas y el cuerpo es la \rule{2cm}{0.1mm}, que permite el registro y reconstrucción en una imagen bidimensional de la zona anatómica.
+%     \begin{tasks}(4)
+%         \task Refracción
+%         \task Reflexión
+%         \task Rarefacción
+%         \task Compresión
+%     \end{tasks}
+
+    \section{(4 puntos) Potencial de acción.}
+
+    \question Se llama \rule{2cm}{0.1mm} al ion que ha ganado electrones.
+    \begin{tasks}(4)
+        \task Anión
+        \task Catión
+        \task Neutro
+        \task Monoatómico        
+    \end{tasks}
+    \question Cuando hablamos de la diferencia en las concentraciones iónicas a nivel intra y extracelular, que condiciona una diferencia entre las cargas a ambos lados de la membrana, las mismas que tratarán de igualarse, hablamos del equilibrio de: \rule{2cm}{0.1mm}
+    \begin{tasks}(4)
+        \task Hodgkin
+        \task Gibbs-Donnan
+        \task Huxley
+        \task Goldman-Katz
+    \end{tasks}
+    \question En el proceso de difusión, una sustancia tiende a moverse de una zona de \rule{2cm}{0.1mm} concentración a un área de \rule{2cm}{0.1mm} concentración, logrando que ésta sea igual a lo largo de un espacio.
+    \begin{tasks}(4)
+        \task Menor - Mayor
+        \task Mayor - Igual
+        \task Mayor - Menor
+        \task Igual - Igual
+    \end{tasks}
+    \question Durante \rule{2cm}{0.1mm} es cuando se abren los canales de Na+ y al ingresar a la parte interna de la célula, se modifica el signo del potencial eléctrico.
+    \begin{multicols}{2}
+    \begin{tasks}
+        \task La repolarización.
+        \task La despolarización.
+        \task El Per. Refractario.
+        \task El Sobretiro.
+    \end{tasks}
+    \end{multicols}
+%     \question Se presenta a continuación una gráfica del potencial de acción, relaciona las fases (inciso con minúsculas) con un número romano en la gráfica.
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale=0.75]{Imagenes/Potencial_Accion_07.png}
+%     \end{figure}
+
+%     Fases del potencial de acción:
+%     \renewcommand{\thepartno}{\alph{partno}}
+%     \begin{multicols}{2}
+%     \begin{parts}
+%         \part Estímulo
+%         \part Reposo
+%         \part Repolarización
+%         \part Período refractario
+%         \part Despolarización
+%          \vspace*{\fill}
+%     \end{parts}
+%     \end{multicols}
+
+%     Opciones de respuesta:
+%     \begin{multicols}{2}
+%     \begin{tasks}
+%         \task I-a, II-d, III-b, IV-e
+%         \task I-e, II-b, III-d, IV-c
+%         \task I-a, II-e, III-c, IV-d
+%         \task I-a, II-e, III-c, IV-b
+%     \end{tasks}
+%     \end{multicols}
+
+\end{questions}
+
+\newpage
+
+\vspace*{1cm}
+\textbf{\huge{Formulario.}}
+\begin{table}[H]
+    \centering
+    \setlength{\tabcolsep}{40pt}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{c  c}
+        \multicolumn{2}{c}{Ondas} \\
+        $v = \lambda \, f$ & $T = \dfrac{1}{f}$ \\ \hline
+        \multicolumn{2}{c}{Sonido} \\
+        $B = 10 \, \log \left( \dfrac{I}{I_{0}} \right)$ & $I_{0} = \SI{1d-12}{\watt\per\square\meter}$ \\
+        $\lambda = \dfrac{2 \, L}{n}$ & $f^{\prime} = \dfrac{f \, V}{V \pm v}$ \\
+        % $f^{\prime} = \dfrac{f \, (V \pm v)}{v}$ & \\ \hline
+        % \multicolumn{2}{c}{Óptica geométrica} \\
+        $n = \dfrac{\text{sen} \, i}{\text{sen} \, i}$ & $n_{a} \, \text{sen} \,  a = n_{b} \, \text{sen} \,  b$ \\ \hline
+        \multicolumn{2}{c}{Lentes delgadas} \\
+        $\dfrac{1}{f} = \dfrac{1}{d_{o}} + \dfrac{1}{d_{i}}$ (lente convergente) & $- \dfrac{1}{f} = \dfrac{1}{d_{o}} - \dfrac{1}{d_{i}}$ (lente divergente) \\
+        $m = - \dfrac{d_{i}}{d_{o}} = \dfrac{h_{i}}{h_{o}}$ & $\text{Potencia } = \dfrac{1}{f} \quad f \text{ en } \unit{\meter}$ \\ \hline
+    \end{tabular}
+\end{table}%
+
+\vspace*{-0.5cm}
+\begin{table}[H]
+    \centering
+    \setlength{\tabcolsep}{40pt}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{c  c}
+        \multicolumn{2}{c}{Hidrodinámica} \\
+        $G = \dfrac{V}{t}$ & $G = A \, v$ \\
+        $\text{Flujo} = \dfrac{m}{t}$ & $\text{Flujo} = \dfrac{\rho \, V}{t}$ \\
+        $\text{Flujo} = G \, \rho$ & \\
+        $v_{1} \, A_{1} = v_{2} \, A_{2}$ & $v = \sqrt{2 \, g \, h}$ \\
+        \multicolumn{2}{c}{$P_{1} + \rho \, g \, h_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \rho \, g \, h_{2} + \dfrac{1}{2} \rho \, v_{2}^{2}$}
+    \end{tabular}
+\end{table}
+    
+
+\newpage
+
+\begin{table}[H]
+    \centering
+    \setlength{\tabcolsep}{40pt}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{c  c}
+        \multicolumn{2}{c}{Electricidad} \\
+        $V = I \, R$ & $R_{T} = R_{1} + R_{2} + R_{3} + \ldots$ \\
+        $\dfrac{1}{R_{T}} = \dfrac{1}{R_{1}} + \dfrac{1}{R_{2}} + \dfrac{1}{R_{3}} + \ldots$ & $\tau = R \, C$ \\
+        $X_{C} = - \dfrac{1}{\omega \, C}$ & $X_{L} = \omega\, L$ \\
+        $Z = R + j \, X_{L}$ & $Z = R - j \, X_{C}$ \\
+        $\abs{Z} = \sqrt{R^{2} + (X_{L})^{2}}$ & $\abs{Z} = \sqrt{R^{2} + (X_{C})^{2}}$ \\
+        $Z = R + j (X_{L} - X_{C})$ & $\abs{Z} = \sqrt{R^{2} + (X_{L} - X_{C})^{2}}$
+\end{tabular}
+\end{table}
+
+\newpage
+
+En este espacio deberás de incluir el desarrollo completo de los Problemas de Ejecución. El problema se califica de la siguiente manera: \\
+\textbf{a) Datos: 0.25 puntos}, \\
+\textbf{b) Expresión(es): 0.25 puntos}, \\
+\textbf{c) Sustitución: 0.25 puntos} y \\
+\textbf{d) Manejo de unidades: 0.25 puntos}.
+
+\vspace*{0.5cm}
+Solución al Problema de Ejecución \ref{Ejercicio_01}:
+
+\vspace*{4cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_02}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_03}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_04}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_05}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_06}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_07}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_08}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_09}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_10}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_11}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_12}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_13}:
+
+\vspace*{4.5cm}
+\rule{0.9\textwidth}{0.1mm}
+
+Solución al Problema de Ejecución \ref{Ejercicio_14}:
+
+
+\end{document}

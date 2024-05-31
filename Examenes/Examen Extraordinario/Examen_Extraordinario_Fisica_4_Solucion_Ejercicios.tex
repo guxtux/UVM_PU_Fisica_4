@@ -1,0 +1,775 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\ExplSyntaxOn
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
+
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{circuitikz}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+
+\DeclareSIUnit{\dB}{dB}
+
+\footer{}{\thepage}{}
+\author{}
+\date{}
+
+\title{Solución a los ejercicios de ejecución \\ Examen Extraordinario de Física IV (Área II)}
+
+\begin{document}
+\maketitle
+
+\setcounter{page}{2}
+
+\begin{questions}
+
+
+    \section{Ondas.}
+
+
+    \setcounter{question}{3} \question \textbf{Ejercicio de ejecución.} En una cuerda tensa se producen ondas con una frecuencia de \SI{450}{\hertz}, a una velocidad de propagación cuya magnitud es de \SI{250}{\meter\per\second}. ¿Qué longitud de onda tienen?
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    f &= \SI{450}{\hertz} \\
+    v &= \SI{250}{\meter\per\second} \\
+    \lambda &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    v = \lambda \cdot f \hspace{0.5cm} \Rightarrow \hspace{0.5cm} \lambda = \dfrac{v}{f}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    \lambda = \dfrac{\displaystyle \SI[per-mode=fraction]{250}{\meter\per\second}}{\SI{450}{\hertz}} = 0.55 \, \dfrac{ \displaystyle \unit[per-mode=fraction]{\meter\per\second}}{ \displaystyle \unit[per-mode=fraction]{\per\second}} = \SI{0.55}{\meter}
+    \end{align*}
+    \begin{tasks}(4)
+       \task \SI{0.25}{\meter}
+       \task \fbox{\SI{0.55}{\meter}}
+       \task \SI{1.20}{\meter}
+       \task \SI{1.62}{\meter}
+    \end{tasks}
+
+    \setcounter{section}{2}
+
+    \section{Oído.}
+
+    \setcounter{question}{8} \question \textbf{Ejercicio de ejecución.} Una fuente sonora produce un sonido con una frecuencia de \SI{750}{\hertz}, calcula su longitud de onda en el agua, considera que la magnitud de la velocidad del sonido en el agua es de \SI{1435}{\meter\per\second}.
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    f &= \SI{750}{\hertz} \\
+    v &= \SI{1435}{\meter\per\second} \\
+    \lambda &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    v = \lambda \cdot f \hspace{0.5cm} \Rightarrow \hspace{0.5cm} \lambda = \dfrac{v}{f}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    \lambda = \dfrac{\displaystyle \SI[per-mode=fraction]{1435}{\meter\per\second}}{\SI{750}{\hertz}} = 1.913 \, \dfrac{ \displaystyle \unit[per-mode=fraction]{\meter\per\second}}{ \displaystyle \unit[per-mode=fraction]{\per\second}} = \SI{1.913}{\meter}
+    \end{align*}
+
+    \begin{tasks}(4)
+       \task \fbox{\SI{1.913}{\meter}}
+       \task \SI{2.856}{\meter}
+       \task \SI{3.102}{\meter}
+       \task \SI{8.139}{\meter}
+    \end{tasks}
+
+    \setcounter{question}{9} \question \textbf{Ejercicio de ejecución.} ¿Cuál es la intensidad de un sonido de \SI{68.55}{\dB}?
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos: }
+    \begin{align*}
+    B &= \SI{68.55}{\dB} \\[0.5em]
+    I_{0} &= \SI{1d-12}{\watt\per\square\meter} \\[0.5em]
+    I &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    B &= 10 \, \log \left( \dfrac{I}{I_{0}} \right)\\[0.4em]
+    \log \left( \dfrac{I}{I_{0}} \right) &= \dfrac{B}{10} \\[0.4em]
+    \dfrac{I}{I_{0}} &= 10^{B/10} \\[0.4em] 
+    \Rightarrow \hspace*{0.2cm} I &= I_{0} \, 10^{B/10}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    I &= \left( \SI[per-mode=fraction]{1d-12}{\watt\per\square\meter} \right) \left( 10^{68.55/10} \right) = \\[0.5em]
+    I &= \left( \SI[per-mode=fraction]{1d-12}{\watt\per\square\meter} \right) \left( 10^{6.85} \right) = \\[0.5em]
+    I &= \left( \SI[per-mode=fraction]{1d-12}{\watt\per\square\meter} \right) \left( \num{7.079d6} \right) = \\[0.5em]
+    I &= \SI[per-mode=fraction]{7.079d-6}{\watt\per\square\meter}
+    \end{align*}
+    \begin{tasks}(4)
+       \task $\displaystyle \SI[per-mode=fraction]{7.079d-4}{\watt\per\square\meter}$
+       \task $\displaystyle \SI[per-mode=fraction]{7.079d-5}{\watt\per\square\meter}$
+       \task \fbox{$\displaystyle \SI[per-mode=fraction]{7.079d-6}{\watt\per\square\meter}$}
+       \task $\displaystyle \SI[per-mode=fraction]{7.079d-9}{\watt\per\square\meter}$
+    \end{tasks}
+
+    % \setcounter{question}{9} \question \textbf{Ejercicio de ejecución.} La conversación ordinaria corresponde a un nivel de sonido de aproximadamente \SI{65}{\dB}. Si dos personas hablan al mismo tiempo, el nivel de sonido es:
+
+    % \vspace{0.4cm}
+    % Si la intensidad del sonido de una persona hablando es $I_{1} = (\SI{65}{\dB})$, la intensidad del sonido de dos personas hablando, será entonces, dos veces la intensidad de una conversación ordinaria, es decir $2 \, I_{1}$.
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % B &= \SI{65}{\dB} \hspace{0.3cm} \text{una persona} \\[0.5em]
+    % B^{\prime} &= \, ? \hspace{0.3cm} \text{dos personas}
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % B^{\prime} &= 10 \, \log \left( \dfrac{2 \, I_{1}}{I_{0}} \right) \\[0.4em]
+    % B^{\prime} &= 10 \, \log \left( 2 \cdot \dfrac{I_{1}}{I_{0}} \right) \\[0.4em]
+    % B^{\prime} &= 10 \, \log 2 + 10 \log \left( \dfrac{I_{1}}{I_{0}} \right)
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % B^{\prime} &= 10 \, \log 2 + 10 \log \left( \dfrac{I_{1}}{I_{0}} \right) \\[0.4em]
+    % B^{\prime} &= 10 \, \log 2 + \SI{65}{\log} \\[0.4em]
+    % B^{\prime} &= \SI{3}{\dB} + \SI{65}{\dB} = \SI{68}{\dB}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \SI{65}{\dB}
+    %     \task \fbox{\SI{68}{\dB}}
+    %     \task \SI{75}{\dB}
+    %     \task \SI{130}{\dB}
+    % \end{tasks}
+
+    \setcounter{section}{3}
+
+    \section{Efecto Doppler.}
+
+    \setcounter{question}{10} \question \textbf{Ejercicio de ejecución: } Una ambulancia lleva una velocidad cuya magnitud es de \SI{70}{\kilo\meter\per\hour} y su sirena suena con una frecuencia de \SI{830}{\hertz}. ¿Qué frecuencia aparente escucha un observador que está parado, cuando la ambulancia se aleja de él? Considera que la velocidad del sonido en el aire es de \SI{340}{\meter\per\second}
+
+    \vspace*{0.3cm}
+    Se necesita primero convertir la velocidad de la ambulancia de \unit{\kilo\meter\per\hour} a \unit{\meter\per\second}:
+    \begin{align*}
+    v = \SI[per-mode=fraction]{70}{\kilo\meter\per\hour} \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \SI[per-mode=fraction]{19.44}{\meter\per\second}
+    \end{align*}
+    
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos: }
+    \begin{align*}
+    v &= \SI{70}{\kilo\meter\per\hour} = \SI{66.66}{\meter\per\second} \\
+    f &= \SI{830}{\hertz} \\
+    V &= \SI{340}{\meter\per\second} \\
+    f^{\prime} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    f^{\prime} &= \dfrac{f \, V}{V + v}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    f^{\prime} = \dfrac{\left( \SI{830}{\hertz} \right)\left( \displaystyle \SI[per-mode=fraction]{340}{\meter\per\second} \right)}{\displaystyle \SI[per-mode=fraction]{340}{\meter\per\second} + \SI[per-mode=fraction]{19.44}{\meter\per\second}} = \SI{785.11}{\hertz}
+    \end{align*}
+
+   \begin{tasks}(4)
+    \task \fbox{\SI{785.11}{\hertz}}
+    \task \SI{880.33}{\hertz}
+    \task \SI{1000.00}{\hertz}
+    \task \SI{1659.19}{\hertz}
+    \end{tasks}
+      
+    \setcounter{question}{11} \question \textbf{Ejercicio de ejecución: } Un automovilista que viaja a una velocidad cuya magnitud es de \SI{80}{\kilo\meter\per\hour} escucha el silbato de una fábrica cuya frecuencia es de \SI{1100}{\hertz}. Calcula la frecuencia aparente escuchada por el automovilista cuando se acerca a la fuente. Considera que la velocidad del sonido en el aire es de \SI{340}{\meter\per\second}
+
+    \vspace*{0.3cm}
+    Se necesita primero convertir la velocidad del coche de \unit{\kilo\meter\per\hour} a \unit{\meter\per\second}:
+    \begin{align*}
+    v = \SI[per-mode=fraction]{80}{\kilo\meter\per\hour} \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \SI[per-mode=fraction]{22.22}{\meter\per\second}
+    \end{align*}
+    
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos: }
+    \begin{align*}
+    v &= \SI{80}{\kilo\meter\per\hour} = \SI{22.22}{\meter\per\second} \\
+    f &= \SI{1100}{\hertz} \\
+    V &= \SI{340}{\meter\per\second} \\
+    f^{\prime} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    f^{\prime} &= \dfrac{f \, (V + v)}{V}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    f^{\prime} = \dfrac{\left( \SI{1100}{\hertz} \right)\left( \displaystyle \SI[per-mode=fraction]{340}{\meter\per\second} + \SI[per-mode=fraction]{22.22}{\meter\per\second} \right)}{\displaystyle \SI[per-mode=fraction]{340}{\meter\per\second}} = \SI{1171.88}{\hertz}
+    \end{align*}
+
+    \begin{tasks}(4)
+        \task \SI{899.20}{\hertz}
+        \task \fbox{\SI{1171.88}{\hertz}}
+        \task \SI{1905.07}{\hertz}
+        \task \SI{2416.23}{\hertz}
+    \end{tasks}
+
+    \newpage
+
+    \setcounter{section}{5}
+    \section{Refracción.}
+
+    \setcounter{question}{15} \question \label{Ejercicio_06} \textbf{Ejercicio de ejecución:} Un rayo de luz, de \SI{589}{\nano\meter} de longitud de onda, que viaja a través de aire $(n_{a} = 1.0)$, incide sobre una lámina plana y uniforme de vidrio sin plomo $(n_{b} = 1.52)$ con un ángulo de \ang{30} con la normal. ¿Cuál es el ángulo de refracción?
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos: }
+    \begin{align*}
+    n_{b} &= 1.52 \\
+    n_{a} &= 1.0 \\
+    a &= \ang{30} \\
+    b &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    &n_{a} \, \sin a = n_{b} \sin b \\[0.5em]
+    &b = \sen^{-1} \left(\dfrac{n_{a} \, \text{sen} \, a}{n_{b}} \right)
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    b = \sen^{-1} \left[ \dfrac{(1.0)(\sen \ang{30})}{1.52} \right] = \sen^{-1} \left[ \dfrac{0.5}{1.52} \right] = \sen^{-1} (0.3289) = \ang{19.20}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \ang{17.19}
+        \task \fbox{\ang{19.20}}
+        \task \ang{38.25}
+        \task \ang{48.07}
+    \end{tasks}
+
+
+    % \question \textbf{Ejercicio de ejecución: } El haz de una linterna incide sobre la superficie de un panel de vidrio $(n_{v} = 1.56)$ en un ángulo de \ang{75} con la normal. ¿Cuál es el ángulo de refracción? El índice de refracción del aire es $n_{a} = 1.0$
+    
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % n_{v} &= 1.56 \\
+    % n_{a} &= 1.0 \\
+    % a &= \ang{75} \\
+    % b &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % &n_{a} \, \sin a = n_{v} \sin b \\[0.5em]
+    % &b = \sen^{-1} \left(\dfrac{n_{a} \, \text{sen} \, a}{n_{v}} \right)
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % b = \sen^{-1} \left[ \dfrac{(1.0)(\sen \ang{75})}{1.56} \right] = \sen^{-1} \left[ \dfrac{0.9659}{1.56} \right] = \sen^{-1} (0.6191) = \ang{38.25}
+    % \end{align*}
+
+    % \vspace{0.4cm}
+    % \begin{tasks}(4)
+    %     \task \ang{27.19}
+    %     \task \ang{39.83}
+    %     \task \fbox{\ang{38.25}}
+    %     \task \ang{48.07}
+    % \end{tasks}
+
+    \setcounter{section}{6}
+    \section{Lentes delgadas.}
+
+    \setcounter{question}{16} \question \textbf{Ejercicio de ejecución.} Un objeto de \SI{15}{\centi\meter} se coloca a \SI{50}{\centi\meter} de una lente positiva que tiene una distancia focal de \SI{20}{\centi\meter}. ¿De qué tamaño es la imagen?
+    
+    Tomemos en cuenta que para responder el tamaño de la imagen del objeto, es necesario calcular la distancia de la imagen $d_{i}$
+
+    \vspace{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    h_{0} &= \SI{15}{\centi\meter} \\
+    d_{0} &= \SI{50}{\centi\meter} \\
+    f &= \SI{20}{\centi\meter} \\
+    d_{i} &= \, ? \\
+    h_{i} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresiones:}
+    \begin{align*}
+    \text{Distancia de la imagen } d_{i} \\[0.3em]
+    \dfrac{1}{f} &= \dfrac{1}{d_{0}} + \dfrac{1}{d_{i}} \\[0.3em]
+    \dfrac{1}{d_{i}} &= \dfrac{1}{f} - \dfrac{1}{d_{0}} \\[0.4em]
+    d_{i} &= \dfrac{1}{\dfrac{1}{f} - \dfrac{1}{d_{0}}} \\[0.5em]
+    \text{Tamaño de la imagen } h_{i} \\[0.3em]
+    \dfrac{h_{i}}{h_{0}} &= - \dfrac{d_{i}}{d_{0}} \\[0.5em]
+    h_{i} &= - \dfrac{d_{i} \cdot h_{0}}{d_{0}} 
+    \end{align*}
+    \end{minipage}
+
+    \vspace{0.3cm}
+    \textbf{Sustitución:}
+
+    Distancia de la imagen:
+    \begin{align*}
+    d_{i} &= \dfrac{1}{\dfrac{1}{f} - \dfrac{1}{d_{0}}} = \dfrac{1}{\dfrac{1}{\SI{20}{\centi\meter}} - \dfrac{1}{\SI{50}{\centi\meter}}} = \SI{33.33}{\centi\meter}
+    \end{align*}
+
+    \vspace{0.3cm}
+    Tamaño de la imagen:
+    \begin{align*}
+    h_{i} &= - \dfrac{(\SI{33.33}{\centi\meter})(\SI{15}{\centi\meter})}{\SI{50}{\centi\meter}} = -\SI{9.99}{\centi\meter}
+    \end{align*}
+    
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \textbf{+}\SI{19.85}{\centi\meter}
+        \task \textbf{+}\SI{25.20}{\centi\meter}
+        \task \SI{-5.04}{\centi\meter}
+        \task \fbox{\SI{-9.99}{\centi\meter}}
+    \end{tasks}
+
+    \setcounter{question}{17} \question \textbf{Ejercicio de ejecución.} Una lente divergente tiene una distancia focal de \SI{10.0}{\centi\meter}, se coloca un objeto de \SI{5.0}{\centi\meter} de altura a \SI{30.0}{\centi\meter} de la lente. ¿Cuál es el tamaño de la imagen?
+
+    \vspace{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    h_{0} &= \SI{5.0}{\centi\meter} \\
+    d_{0} &= \SI{30}{\centi\meter} \\
+    f &= \SI{10}{\centi\meter} \\
+    d_{i} &= \, ? \\
+    h_{i} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresiones:}
+    \begin{align*}
+    \text{Distancia de la imagen } d_{i} \\[0.3em]
+    \dfrac{1}{-f} &= \dfrac{1}{d_{0}} + \dfrac{1}{d_{i}} \\[0.3em]
+    \dfrac{1}{d_{i}} &= \dfrac{1}{-f} - \dfrac{1}{d_{0}} \\[0.4em]
+    d_{i} &= \dfrac{1}{\dfrac{1}{-f} - \dfrac{1}{d_{0}}} \\[0.5em]
+    \text{Tamaño de la imagen } h_{i} \\[0.3em]
+    \dfrac{h_{i}}{h_{0}} &= - \dfrac{d_{i}}{d_{0}} \\[0.5em]
+    h_{i} &= - \dfrac{d_{i} \cdot h_{0}}{d_{0}} 
+    \end{align*}
+    \end{minipage}
+
+    \vspace{0.3cm}
+    \textbf{Sustitución:}
+    Distancia de la imagen:
+    \begin{align*}
+    d_{i} &= \dfrac{1}{- \dfrac{1}{\SI{10}{\centi\meter}} - \dfrac{1}{\SI{30}{\centi\meter}}} = \SI{-7.5}{\centi\meter}
+    \end{align*}
+
+    \vspace{0.3cm}
+    Tamaño de la imagen:
+    \begin{align*}
+    h_{i} &= - \dfrac{(\SI{-7.5}{\centi\meter})(\SI{5}{\centi\meter})}{\SI{30}{\centi\meter}} = +\SI{1.5}{\centi\meter}
+    \end{align*}
+    
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \textbf{+}\SI{5.20}{\centi\meter}
+        \task \SI{-5.20}{\centi\meter}
+        \task \SI{-1.5}{\centi\meter}
+        \task \fbox{\textbf{+}\SI{1.5}{\centi\meter}}
+    \end{tasks}
+
+
+
+
+    % \setcounter{question}{19} \question \textbf{Ejercicio de ejecución: } ¿Cuál es la potencia de una lente con \SI{15}{\centi\meter} de distancia focal?
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % f &= \SI{15}{\centi\meter} = \SI{0.15}{\meter} \\
+    % P &= \, ? \\
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresiones:
+    % \begin{align*}
+    % P = \dfrac{1}{f}
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % P = \dfrac{1}{\SI{0.15}{\meter}} = 6.66 \, \text{Dioptrías}
+    % \end{align*}
+
+    % \vspace{0.3cm}
+    % \begin{tasks}(4)
+    %     \task \num{-2.98} Dioptrías
+    %     \task \num{2.98} Dioptrías
+    %     \task \fbox{\num{6.66} Dioptrías}
+    %     \task \num{-5.25} Dioptrías
+    % \end{tasks}
+
+    \setcounter{section}{9}
+    \section{Ecuación de Bernoulli.}
+
+    \setcounter{question}{23} \question \textbf{Ejercicio de ejecución:} Se conduce agua ($\rho = \SI{1000}{\kilo\gram\per\cubic\meter})$ a través de una tubería horizontal de \SI{0.02}{\square\meter} de área en la sección más ancha (Sección 1), tiene un estrechamiento con un área de \SI{0.01}{\square\meter} (Sección 2). La velocidad en la Sección 1 es de \SI{4}{\meter\per\second} a una presión de \SI{4d5}{\pascal}. ¿Cuál es la presión en la Sección 2?
+
+    \vspace{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    A_{1} &= \SI{0.02}{\square\meter} \\
+    A_{2} &= \SI{0.01}{\square\meter} \\
+    v_{1} &= \SI{4}{\meter\per\second} \\
+    \rho &= \SI{1000}{\kilo\gram\per\cubic\meter} \\
+    P_{1} &= \SI{4d5}{\pascal} \\
+    v_{2} = \, ? \\
+    P_{2} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.5\linewidth}
+    \textbf{Expresiones:}
+    \begin{align*}
+    &A_{1} \, v_{1} = A_{2} \, v_{2} \\
+    \Rightarrow &v_{2} = \dfrac{A_{1} \, v_{1}}{A_{2}} \\[0.5em]
+    &P_{1} + \rho \, g \, h_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \rho \, g \, h_{2} + \dfrac{1}{2} \rho \, v_{2}^{2} \\
+    \Rightarrow &P_{1} + \dfrac{1}{2} \rho \, v_{1}^{2} = P_{2} + \dfrac{1}{2} \rho \, v_{2}^{2} \\
+    \Rightarrow &P_{2} = \dfrac{1}{2} \rho \, \left( v_{1}^{2} - v_{2}^{2} \right) + P_{1} 
+    \end{align*}
+    \end{minipage}
+
+    \vspace{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    v_{2} &= \dfrac{\displaystyle \left( \SI{0.02}{\square\meter} \right) \left( \SI[per-mode=fraction]{4}{\meter\per\second} \right)}{\SI{0.01}{\square\meter}} = \SI[per-mode=fraction]{8}{\meter\per\second} \\[0.5em]
+    P_{2} &= \dfrac{\displaystyle \left( \SI[per-mode=fraction]{1000}{\kilo\gram\per\cubic\meter} \right) \left[ \left( \SI[per-mode=fraction]{4}{\meter\per\second} \right)^{2} - \left( \SI[per-mode=fraction]{8}{\meter\per\second} \right)^{2} \right] }{2} + \SI{4d5}{\pascal} = \\[0.5em]
+    P_{2} &= \dfrac{\displaystyle \left( \SI[per-mode=fraction]{1000}{\kilo\gram\per\cubic\meter} \right) \left( \SI[per-mode=fraction]{16}{\square\meter\per\square\second} - \SI[per-mode=fraction]{64}{\square\meter\per\square\second} \right) }{2} + \SI{4d5}{\pascal} = \\[0.5em]
+    P_{2} &= \dfrac{\displaystyle \left( \SI[per-mode=fraction]{1000}{\kilo\gram\per\cubic\meter} \right) \left( \SI[per-mode=fraction]{-8}{\square\meter\per\square\second} \right) }{2} + \SI{4d5}{\pascal} = \\[0.5em]
+    % P_{2} &= \dfrac{\displaystyle \left( \SI[per-mode=fraction]{1000}{\kilo\gram\per\cubic\meter} \right) \left( \SI[per-mode=fraction]{-8}{\square\meter\per\square\second} \right) }{2} + \SI{4d5}{\pascal} = \\
+    P_{2} &= \SI[per-mode=fraction]{-2.4d-4}{\kilo\gram\meter\per\square\second} \,\unit[per-mode=fraction]{\per\square\meter} + \SI{4d5}{\pascal} = \\[0.5em]
+    P_{2} &= \SI[per-mode=fraction]{-2.4d-4}{\newton\per\square\meter} + \SI{4d5}{\pascal} = \\[0.5em]
+    P_{2} &= \SI{3.76e5}{\pascal}
+    \end{align*}
+
+    \vspace*{0.3cm}
+    \begin{tasks}(4)
+        \task \SI{6.37e5}{\pascal}
+        \task \SI{5.52e5}{\pascal}
+        \task \SI{4.95e5}{\pascal}
+        \task \fbox{\SI{3.76e5}{\pascal}}
+    \end{tasks}
+    
+    % \question \label{Problema_01} \textbf{Ejercicio de ejecución: } En el cuerpo humano el flujo sanguíneo es de $5$ litros de sangre por minuto. ¿Cuál es el área de la sección transversal de la aorta, si la sangre en ese vaso tiene una velocidad de \SI{28}{\centi\meter\per\second}? Recuerda que 1 litro = \SI{1000}{\cubic\centi\meter}.
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % V &= \SI{5}{\liter} = \SI{5000}{\cubic\centi\meter} \\[0.3em]
+    % t &= \SI{1}{\minute} = \SI{60}{\second} \\[0.3em]
+    % v &= \SI{28}{\centi\meter\per\second} \\
+    % A &= \, ? \\
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresiones:
+    % \begin{align*}
+    % G &= \dfrac{V}{t} \\[0.3em]
+    % A &= \dfrac{G}{v}
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % G &= \dfrac{\SI{5000}{\cubic\centi\meter}}{\SI{60}{\second}} = \SI[per-mode=fraction]{83.33}{\cubic\centi\meter\per\second} \\[0.5em]
+    % A &= \dfrac{\displaystyle \SI[per-mode=fraction]{83.33}{\cubic\centi\meter\per\second}}{\displaystyle \SI[per-mode=fraction]{28}{\centi\meter\per\second}} = \SI{2.97}{\square\centi\meter}
+    % \end{align*}
+    
+    % \begin{tasks}(4)
+    %     \task \SI{2.77}{\square\centi\meter}
+    %     \task \fbox{\SI{2.97}{\square\centi\meter}}
+    %     \task \SI{3.10}{\square\centi\meter}
+    %     \task \SI{1.77}{\square\centi\meter}
+    % \end{tasks}
+
+    \setcounter{section}{10}
+    \section{Corriente directa y alterna.}
+
+    \setcounter{question}{25} \question \textbf{Ejercicio de ejecución:} Determina la intensidad de la corriente eléctrica a través de una resistencia de \SI{150}{\ohm} al aplicarle una diferencia de potencial de \SI{440}{\volt}.
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    R &= \SI{150}{\ohm} \\[0.3em]
+    V &= \SI{440}{\volt} \\[0.3em]
+    I &= \, ? \\
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    V = I \, R \hspace{0.2cm} \Rightarrow \hspace{0.2cm} I = \dfrac{V}{R}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    I = \dfrac{\SI{440}{\volt}}{\SI{150}{\ohm}} = \SI{2.93}{\ampere}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \fbox{\SI{2.93}{\ampere}}
+        \task \SI{6.16}{\ampere}
+        \task \SI{12.40}{\ampere}
+        \task \SI{20.61}{\ampere}
+    \end{tasks}
+
+    \setcounter{question}{26} \question \textbf{Ejercicio de ejecución:} Calcula la diferencia de potencial aplicada a una resistencia de \SI{250}{\ohm} y por ella fluyen \SI{5}{\milli\ampere}.
+
+    \vspace*{0.5cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    R &= \SI{250}{\ohm} \\[0.3em]
+    I &= \SI{5}{\milli\ampere} = \SI{5d-3}{\ampere} \\[0.3em]
+    V &= \, ? \\
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    V = I \, R
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.5cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    V = (\SI{5d-3}{\ampere})(\SI{250}{\ohm}) = \SI{1.25}{\volt}
+    \end{align*}
+    
+    \vspace{0.3cm}    
+    \begin{tasks}(4)
+        \task \SI{3.00}{\volt}
+        \task \SI{2.20}{\volt}
+        \task \fbox{\SI{1.25}{\volt}}
+        \task \SI{2.40}{\volt}
+    \end{tasks}
+
+    \setcounter{section}{12} 
+    \section{Circuitos eléctricos.}
+
+    \setcounter{question}{27} \question \textbf{Ejercicio de ejecución: } Calcula la reactancia inductiva del siguiente inductor:
+    \begin{center}
+        \begin{circuitikz}[american voltages]
+            \draw 
+                (0, 0) to[short, o-] (1, 0)
+                to [L, l=\mbox{$L=\SI{1.2}{\henry}$}] (3, 0)
+                to[short, -o] (4, 0);
+            \node at (2, -0.75) {$\omega = \SI{377}{\radian\per\second}$};
+        \end{circuitikz}  
+    \end{center}
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    L &= \SI{1.2}{\henry} \\[0.3em]
+    \omega &= \SI{377}{\radian\per\second} \\[0.3em]
+    X_{L} &= \, ? \\
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    X_{L} = \omega \cdot L
+    \end{align*}
+    \end{minipage}
+    
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    X_{L} = (\SI{377}{\radian\per\second})(\SI{1.2}{\henry}) = \SI{452.4}{\ohm}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \SI{246.1}{\ohm}
+        \task \SI{370.7}{\ohm}
+        \task \fbox{\SI{452.4}{\ohm}}
+        \task \SI{500.9}{\ohm}
+    \end{tasks}
+
+    \setcounter{question}{28} \question \textbf{Ejercicio de ejecución:} Calcula la reactancia capacitiva del siguiente condensador:
+    \begin{center}
+        \begin{circuitikz}[american voltages]
+            \draw 
+                (0, 0) to[short, o-] (1, 0)
+                to [C, l=\mbox{$C=\SI{5}{\micro\farad}$}] (3, 0)
+                to[short, -o] (4, 0);
+            \node at (2, -0.75) {$\omega = \SI{159}{\radian\per\second}$};
+        \end{circuitikz}  
+    \end{center}
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    C &= \SI{5}{\micro\farad} = \SI{5d-6}{\farad}\\[0.3em]
+    \omega &= \SI{159}{\radian\per\second} \\[0.3em]
+    X_{C} &= \, ? \\
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    X_{C} = - \dfrac{1}{\omega \cdot C}
+    \end{align*}
+    \end{minipage}
+    
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    X_{C} = - \dfrac{1}{\displaystyle \left( \SI[per-mode=fraction]{159}{\radian\per\second} \right) (\SI{5d-6}{\farad})} = \SI{-1257.86}{\ohm}
+    \end{align*}
+    
+    \vspace*{0.3cm}
+    \begin{tasks}(4)
+        \task \fbox{\SI{-1257.86}{\ohm}}
+        \task \SI{-1761.00}{\ohm}
+        \task \SI{-2138.36}{\ohm}
+        \task \SI{-2515.72}{\ohm}
+    \end{tasks}
+
+    \newpage
+
+    \setcounter{section}{14} 
+    \section{Impedancia eléctrica.}
+
+    \setcounter{question}{29} \question \textbf{Ejercicio de ejecución: } Una resistencia $R = \SI{27.5}{\ohm}$ y un capacitor $C = \SI{66.7}{\micro\farad}$ se conectan en serie. La diferencia de potencial es $V = \num{50} \, \cos 1500 \, t$ \, Volts. ¿Cuál es la magnitud de la impedancia eléctrica $Z$?
+    
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    R &= \SI{27.5}{\ohm} \\[0.3em]
+    C &= \SI{66.7}{\micro\farad} = \SI{6.67d-5}{\farad} \\[0.3em]
+    V &= \num{50} \, \cos 1500 \, t \\[0.3em]
+    \omega &= \SI{1500}{\radian\per\second} \\[0.3em]
+    X_{C} &= \, ? \\[0.3em]
+    Z &= \, ? \\
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresiones:}
+    \begin{align*}
+    X_{C} &= - \dfrac{1}{\omega \, C} \\[0.3em]
+    \abs{Z} &= \sqrt{R^{2} + (X_{C})^{2}}
+    \end{align*}
+    \end{minipage}
+    
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    X_{C} &= - \dfrac{1}{(\SI{1500}{\radian\per\second})(\SI{6.67d-5}{\farad})} = -\SI{9.99}{\ohm} \\[0.3em]
+    \abs{Z} &= \sqrt{(\SI{27.5}{\ohm})^{2} + (\SI{-9.99}{\ohm})^{2}} = \sqrt{\SI{856.15}{\square\ohm}} = \\[0.3em]
+    \abs{Z} &= \SI{29.26}{\ohm}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \SI{14.99}{\ohm}
+        \task \SI{98.95}{\ohm}
+        \task \fbox{\SI{29.26}{\ohm}}
+        \task \SI{24.70}{\ohm}
+    \end{tasks}
+
+\end{questions}
+
+\end{document}
